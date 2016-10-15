@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <form method="post" action="demo.php" enctype="multipart/form-data">
+  <!-- 一定要写enctype="multipart/form-data" 这是上传文件的必要条件 -->
+  <input name='pic[]' type="file" multiple >
+  <!-- 这里的name如果是多个文件一定要写成数组形式，因为不写成数组形式，只能上传单个文件 
+	   这里的multiple是html5的新特性，支持多文件上传。兼容性不好。低版本的IE6,7,8,9不适
+	   合，当然现在很少用IE6,7,8,9的了。所以这点忽略。
+  -->
+  <input type="submit" value="上传">
+  <!-- 上传按钮 -->
+</form>
+
+　　
+</body>
+</html>

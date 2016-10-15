@@ -1,0 +1,126 @@
+/**
+* ================================================
+* title：regiter.css
+* time: 2016-10-7
+* author: 杨凤玲
+* content: 注册界面（register.html）相关css
+* ================================================
+*/
+
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+input,textarea,img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+
+body {
+    padding: 0;
+    background: url(../img/bg.jpg) no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+img {
+  display: none;
+}
+input {
+  display: inline-block;
+}
+#register form div {
+    width: 70%;
+    margin: 0 auto;
+}
+#register form .btn {
+    width: 70px;
+    height: 30px;
+    display: block;
+    margin: 10px auto;
+}
+#register form .form-control {
+    background-color: rgba(255, 255, 255,.4);
+    width: 90%;
+    display: inline-block;
+}
+#register .glyphicon-control {
+    position: relative;
+    right: 35px;
+    top: 2px;
+}
+#register #p1,
+#register #p2,
+#register #p3 {
+    display: none;
+    font: 12px;
+    color: #f00;
+}
+
+/* footer css */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #dedede;
+}
+footer p {
+    text-align: center;
+}
+footer .aboutme {
+    padding: 30px 0 20px;
+}
+footer{
+    font-size: 12px;
+}
+
+
+/* sm小屏幕（平板，[768~992)px ） */
+@media (min-width: 768px) {
+    footer {
+    font-size: 14px;
+   }
+   #register form div {
+    width: 60%;
+    margin: 0 auto;
+   }
+   #register form button {
+    display: block;
+    margin: 0 auto;
+   }
+   #register form .btn {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+
+   }
+
+}
+
+/* md中等屏幕（桌面显示器，[992-1200)px ） */
+@media (min-width: 992px) {
+   #register form div {
+    max-width: 400px;
+    margin: 0 auto;
+   }
+   #register form .btn {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+
+   }
+}
+
+/* lg大屏幕（大桌面显示器，1200+    ） */
+@media (min-width: 1200px) {
+    footer {
+    font-size: 14px;
+   }
+   #register form .btn {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+
+   }
+
+}

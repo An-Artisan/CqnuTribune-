@@ -1,0 +1,315 @@
+/**
+* ================================================
+* title：style.css
+* time: 2016-10-7
+* author: 杨凤玲
+* content: 主CSS文件
+* ================================================
+*/
+
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+input,textarea,img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+
+body {
+    padding: 0;
+    z-index: 100;
+    position: absolute;
+}
+
+/*************xs移动端优先设置**********/
+/***********secondHands.css************/
+
+
+
+
+.container {
+    width: 100%;
+}
+.row {
+    margin: 0;
+}
+.navbar {
+    margin-bottom: 0;
+}
+#section1 {
+    width: 100%;
+    padding: 35px 0;
+}
+#section1 .container .title h1 {
+    font-size: 22px;
+}
+#section1 .container .content .row div {
+    padding: 10px;
+}
+
+/* section2 css */
+#section2 nav {
+    width: 100%;
+    height: 55px;
+}
+#section2 ol li:last-child {
+    float: right;
+}
+.caption p,
+.caption h3 {
+    text-align: center;
+}
+
+/* section3 css */
+
+#section3 .nav {
+    background-color: #F6FBFB;
+    padding: 0;
+    height: 500px;
+}
+#section3 .nav  ul li {
+    padding: 15px;
+    border-bottom: 1px solid #dedede;
+}
+
+#section3 .nav ul li a {
+    display: inline-block;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+}
+#section3 .nav ul li:first-child {
+    background-color: #dedede;
+    width: 100%;
+}
+#section3 .nav ul li:first-child a {
+    font-size: 22px;
+}
+#section3 .container {
+    width: 99%;
+    margin-top: 30px;
+}
+#section3 .container .media {
+    margin: 20px 0;
+}
+#section3 .container .col-md-9 {
+    border: 1px solid #ddd;
+}
+
+/* footer css */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #dedede;
+}
+footer p {
+    text-align: center;
+}
+footer .aboutme {
+    padding: 30px 0 20px;
+}
+
+/**********************************/
+/***********details.css************/
+
+/* goods */
+#goods {
+    margin-top: 20px;
+}
+#goods .title {
+    margin: 15px 0;
+}
+#goods .title h1 {
+    font-size: 15px;
+}
+#goods .img {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+#goods .price {
+    width: 100%l;
+    height: 90px;
+    background-color: #DCEAFF;
+}
+#goods .price p:first-child span {
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #1E619D;
+}
+#goods .price p {
+    padding: 5px;
+}
+#goods .price s {
+    display: inline-block;
+}
+#goods .price p:nth-of-type(2) {
+    width: 100px;
+    display: inline-block;
+}
+#goods .price p:nth-of-type(3) {
+    display: inline-block;
+}
+#goods i {
+    margin: 10px;
+}
+/* #goods .show1 {
+    max-height: 120px;
+    max-width: 120px;
+}
+#goods .show2 {
+    max-height: 150px;
+    max-width: 150px;
+
+} */
+#goods .more {
+    border: 1px solid #dedede;
+    margin: 20px 0;
+}
+#goods .more img {
+    display: inline-block;
+    margin: 13px 0;
+}
+#goods .col-md-3 {
+    padding: 0;
+}
+#goods .hot {
+    border-left: 1px solid #dedede;
+}
+#goods .hot span {
+    margin: 0 15px;
+}
+#goods .hot h2 {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    background-color: #FDFEFF;
+    font-size: 16px;
+    line-height: 40px;
+}
+#goods .hot img {
+    margin: 13px 0;
+}
+#goods .hot ol {
+    padding: 0px;
+}
+#goods .hot ol li {
+    margin: 10px;
+}
+
+/* content css */
+.content {
+    margin: 20px 0;
+}
+#content .row {
+    border: 1px solid #dedede;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+#content button {
+    display: block;
+}
+#content .btn {
+    padding: 6px;
+}
+#content .row .col-xs-3 img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+#content .row .btn {
+    padding: 3px;
+    margin: 5px auto;
+}
+#content .row .col-xs-3 p {
+    text-align: center;
+}
+#content .row .col-xs-3 {
+    border-right: 1px solid #dedede;
+    padding: 10px 5px;
+}
+
+#content .row .col-xs-9 {
+    padding-left: 0;
+    position: relative;
+}
+#content .row .time {
+    border-bottom: 1px solid #dedede;
+    padding-left: 10px;
+}
+#content .row .content {
+    padding-left: 10px;
+}
+#content .row .supo {
+    width: 97%;
+    border-top: 1px solid #ddd;
+    margin: 0 auto;
+    padding-left: 10px;
+
+    position: relative;
+    top: 100%;
+}
+
+/* footer */
+footer{
+    font-size: 12px;
+}
+/* sm小屏幕（平板，[768~992)px ） */
+@media (min-width: 768px) {
+    #section1 .container .title h1 {
+        font-size: 28px;
+    }
+    .show1 {
+        width: 80px;
+        height: 80px;
+    }
+    #content .row,
+    footer {
+    font-size: 14px;
+   }
+}
+
+/* md中等屏幕（桌面显示器，[992-1200)px ） */
+@media (min-width: 992px) {
+    #section1 .container .title h1 {
+        font-size: 30px;
+    }
+    #goods .hot {
+    border-left: 1px solid #dedede;
+    }
+    #goods .hot span {
+    margin: 0 15px;
+    }
+    #goods .hot h2 {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    background-color: #FDFEFF;
+    font-size: 18px;
+    line-height: 40px;
+    }
+    #content .row,
+    footer {
+    font-size: 14px;
+   }
+    #content .row .col-xs-3 img {;
+    width: 110px;
+    height: 110px;
+    }
+}
+
+/* lg大屏幕（大桌面显示器，1200+    ） */
+@media (min-width: 1200px) {
+    #section1 .container .title h1 {
+        font-size: 32px;
+    }
+    #content .row,
+    footer {
+    font-size: 14px;
+   }
+
+}

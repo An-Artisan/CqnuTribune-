@@ -1,0 +1,48 @@
+/**
+* ================================================
+* title：style.css
+* time: 2016-10-7
+* author: 杨凤玲
+* content: 主CSS文件
+* ================================================
+*/
+
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+input,textarea,img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+
+body {
+    padding: 0;
+}
+
+
+.content  div {
+    background-color: #dedede;
+    border: 1px solid #800;
+    height: 400px;
+}
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* sm小屏幕（平板，[768~992)px ） */
+@media (min-width: 768px) {
+
+}
+
+/* md中等屏幕（桌面显示器，[992-1200)px ） */
+@media (min-width: 992px) {
+
+}
+
+/* lg大屏幕（大桌面显示器，1200+    ） */
+@media (min-width: 1200px) {
+
+
+}
