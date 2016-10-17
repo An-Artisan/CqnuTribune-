@@ -44,14 +44,15 @@
 
 
 	// //=====查询类实例开始=====
-	// $select = Select::create_singleton();
-	// $sql = "select * from webchat_message";
-	// $result = $select->select($sql);
-	// while($data = mysqli_fetch_object($result)) {
+	$select = Select::create_singleton();
+	$sql = "select `content`,`time` from `webchat_message` where sender = '王五' or getter = 'liuqiang' order by desc time";
+	$result = $select->select($sql);
+	// var_dump($result);
+	while($data = mysqli_fetch_object($result)) {
 
-	// 			echo $data->content,'<br>';	
+				echo $data->content,'<br>';	
 
-	// 	}
+		}
 	// boolean/result select(string $sql)  返回值布尔型(结果集,false) 参数1:sql语句
 	// //====查询类实例结束=====
 

@@ -42,9 +42,9 @@ class MysqlConn{
 	// 服务器地址
 	public   $username = 'root';
 	// 数据库用户名
-	public   $password = null;
+	public   $password = 'JokerHosting520';
 	// 数据库登陆密码
-	public   $dbName = 'test';
+	public   $dbName = 'test1';
 	// 数据库
 	protected $conn = null;
 	public function create_singleton(){
@@ -230,7 +230,7 @@ class Log{
 		// 关闭句柄
 	}
 	final protected function __construct(){
-		$this->open = fopen("./all.class/mysql.class/sql.log","a");
+		$this->open = fopen("../cqnu_class/all.class/mysql.class/sql.log","a");
 		// 实例化对象时，把打开文件的句柄赋值给类保护变量$open
 	}
 		//禁止继承类覆盖构造函数

@@ -7,6 +7,7 @@
 * ================================================
 */
 
+
   function checkName(name){  //验证name
     if(name != ""){ //不为空则正确，当然也可以ajax异步获取服务器判断用户名不重复则正确
       document.images[0].setAttribute("src","./img/gou.png"); //对应图标
