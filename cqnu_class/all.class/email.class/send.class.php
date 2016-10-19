@@ -109,6 +109,8 @@ class EmailLog{
 	// 定义打开文件句柄
 	protected static $ins = null;
 	// 保存对象
+	protected static $path = 'E:\WebRoot\chatRoom\cqnu_class\all.class\mysql.class\sql.log';
+	// 定义日志文件路径
 	public function create_singleton(){
 	if(self::$ins == null){
 		self::$ins = new self();
@@ -146,7 +148,7 @@ class EmailLog{
 		
 	}
 	final protected function __construct(){
-		$this->open = fopen("./all.class/email.class/email.log","a");
+		$this->open = fopen($this->path,"a");
 		// 实例化对象时，把打开文件的句柄赋值给类保护变量$open
 	}
 		//禁止继承类覆盖构造函数

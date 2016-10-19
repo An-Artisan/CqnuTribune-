@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" href="css/chatRoom.css">
-    <link rel="stylesheet" type="text/css" href="wangEditor-2.1.20/dist/css/wangEditor.min.css">
+    <link rel="stylesheet" type="text/css" href="Editor/dist/css/wangEditor.min.css">
 </head>
 <body>
     <div id="sender" style="display:none;"><?php echo $_POST['user']; ?></div>
@@ -42,7 +42,7 @@
                                 <span class="glyphicon glyphicon-search"></span>
                                 <input type="text" class="form-control" placeholder="查找联系人或群">
                             </div>
-                            <div class="others" style="overflow:auto;">
+                            <div class="others" >
                                 <div name="friend" class="one">
                                     <img src="img/sina-icon.jpg" height="50" width="50" alt="head portrait" class="img-circle">
                                     <h4>liuqiang</h4>
@@ -100,7 +100,6 @@
                                 <span class="glyphicon glyphicon-chevron-down"></span> -->
                             </div>
                             <div id="content" style="overflow:auto;" class="content">
-                             
                             </div>
                             <div>
                                 <div id="div1" >
@@ -126,12 +125,13 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!--引入jquery和wangEditor.js-->
-    <script type="text/javascript" src="wangEditor-2.1.20/dist/js/lib/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="wangEditor-2.1.20/dist/js/wangEditor.min.js"></script>
+    <script type="text/javascript" src="Editor/dist/js/lib/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="Editor/dist/js/wangEditor.js"></script>
     <!--这里引用jquery和wangEditor.js-->
     <script type="text/javascript" src="js/getNowTime.js"></script>
     <script type="text/javascript" src="js/getMessage.js"></script>
     <script type="text/javascript" src="js/sendMessage.js"></script>
+    <!-- <script type="text/javascript" src="js/messagePush.js"></script> -->
     <script type="text/javascript">
     if (screen.width < 768){
         var target = document.getElementById("one");
@@ -161,26 +161,17 @@
         'emotion',
         '|',
         'img',
-        'insertcode',
-        'undo',
-        'redo',
-        'fullscreen'
      ];
-
-     // 仅仅想移除某几个菜单，例如想移除『插入代码』和『全屏』菜单：
-     // 其中的 wangEditor.config.menus 可获取默认情况下的菜单配置
-     // editor.config.menus = $.map(wangEditor.config.menus, function(item, key) {
-     //     if (item === 'insertcode') {
-     //         return null;
-     //     }
-     //     if (item === 'fullscreen') {
-     //         return null;
-     //     }
-     //     return item;
-     // });
-
-    editor.create();
-    editor.$txt.html('<p><br></p>');
+      editor.config.uploadImgUrl = './uploadFile/upload.php';
+      // 添加上传图片后台地址
+      editor.config.hideLinkImg = true;
+      // 隐藏网络路径图片引用功能
+      editor.config.uploadImgFileName = 'myFileName';
+      // 设置拖拽，复制，上传图片的共同FileName为'myFileName' 方便统一
+      editor.create();
+      // 创建编辑器
+      editor.$txt.html('<p><br></p>');
+      // 清空编辑器
 </script>
 </body>
 </html>

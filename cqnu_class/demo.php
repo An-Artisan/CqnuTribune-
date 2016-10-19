@@ -44,15 +44,15 @@
 
 
 	// //=====查询类实例开始=====
-	$select = Select::create_singleton();
-	$sql = "select `content`,`time` from `webchat_message` where sender = '王五' or getter = 'liuqiang' order by desc time";
-	$result = $select->select($sql);
-	// var_dump($result);
-	while($data = mysqli_fetch_object($result)) {
+	// $select = Select::create_singleton();
+	// $sql = "select `content`,`time` from `webchat_message` where sender = '王五' or getter = 'liuqiang' order by desc time";
+	// $result = $select->select($sql);
+	// // var_dump($result);
+	// while($data = mysqli_fetch_object($result)) {
 
-				echo $data->content,'<br>';	
+	// 			echo $data->content,'<br>';	
 
-		}
+	// 	}
 	// boolean/result select(string $sql)  返回值布尔型(结果集,false) 参数1:sql语句
 	// //====查询类实例结束=====
 
@@ -185,6 +185,14 @@
     // }
     //======单文件或者多文件上传类实例结束======
 
+    //======缩略图剪裁开始======
+	//使用方法：  
+	// $_path = './chatRoom/demo/1.jpg';  
+	// $_img = new Image($_path);//$_path为图片文件的路径  
+	// $_img->thumb(300, 300);  
+	// $_img->out();  
+	//======缩略图剪裁结束======
+	
     //======水印类实例开始======
     // foreach ($up->getFileName() as $key => $value) {
     // $waterprint = new WaterMask('images/'.$value); 

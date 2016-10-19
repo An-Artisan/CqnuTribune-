@@ -17,4 +17,6 @@
     // 引用上传单文件或者多文件类
     require 'getposition.class/getposition.class.php';
     // 引用根据IP定位位置类
+    require 'thumb.class/thumb.class.php';
+    // 引用缩略图剪裁类
  ?>

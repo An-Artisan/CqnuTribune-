@@ -10,6 +10,7 @@
               
  * @功能:     实现即时通信拉取全部消息和即时单条消息
  * @作者:     不敢为天下
+ * @时间：    2016-10-8
 */
 var friendList = document.getElementsByName('friend');
 // 获取name集合

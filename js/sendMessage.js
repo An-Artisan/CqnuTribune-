@@ -7,6 +7,7 @@
               
  * @功能:     实现单条即时消息的发送
  * @作者:     不敢为天下
+ * @时间：    2016-10-10
 */
 //=====发送消息开始=====
 // document.onreadystatechange = subSomething;
