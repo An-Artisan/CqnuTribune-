@@ -1,0 +1,21 @@
+/**
+* ================================================
+* title：reset.css
+* time: 2016-10-17
+* author: 杨凤玲
+* content: 重置样式
+* ================================================
+*/
+
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+input,textarea,img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+
+body {
+    padding: 0;
+}

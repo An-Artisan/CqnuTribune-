@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+.wall ul, li {
+    list-style: none;
+    vertical-align: top
+}
+.wall input, button, select, textarea {
+    outline: none;
+}
+.wall input::-ms-clear {
+    display: none;
+}
+.wall textarea {
+    resize: none;
+}
+.clear:after {
+    display: block;
+    content: ".";
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.clear {
+    *zoom: 1;
+}
+.wall em {
+    font-style: normal
+}
+:focus {
+    outline: 0;
+}
+.wall a {
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+.wall a:link {
+    text-decoration: none;
+    color: #151c24;
+}
+.wall a:visited {
+    text-decoration: none;
+    color: #151c24;
+}
+.wall a:hover {
+    text-decoration: none;
+    color: #2ea5da;
+}
+.wall a:active {
+    text-decoration: none;
+    color: #151c24;
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+
+/*布局样式*/
+.none {
+    display: none
+}
+.block {
+    display: block
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right
+}
+.mgnAto {
+    margin: auto
+}
+
+/* slide之css */
+.wall {
+    overflow: hidden;
+    width: 330px;
+    height: 330px;
+    margin: 0 auto;
+}
+.focusBox {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    overflow: hidden;
+}
+.focusBox .pic {
+    position: relative;
+    z-index: 0;
+}
+.focusBox .pic img {
+    width: 330px;
+    height: 330px;
+    display: block;
+}
+.focusBox .hd {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 0;
+    z-index: 1;
+}
+.focusBox .hd li {
+    margin: 0 3px;
+    background: url(../images/dot.png) no-repeat 0 -16px;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    _background: url(../images/dot8.png) no-repeat 0 -16px;
+}
+.focusBox .hd .on {
+    background-position: 0 0;
+}
+.focusBox .prev, .focusBox .next {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0;
+    display: none;
+    background: url(../images/ad_ctr.png) no-repeat 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    text-indent: -9999px;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+}
+.focusBox .prev {
+    left: 7px;
+    background-position: -5px -23px;
+}
+.focusBox .next {
+    right: 7px;
+    background-position: -17px -113px;
+}
+.focusBox .prev:hover, .focusBox .next:hover {
+    filter: alpha(opacity=50) !important;
+    opacity: 0.5 !important;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width:1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width:992px) {
+    .wall {
+        width: 240px;
+        height: 240px;
+    }
+    .focusBox {
+        width: 240px;
+        height: 240px;
+    }
+    .focusBox .pic img {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width:768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width:480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width:320px) {
+}

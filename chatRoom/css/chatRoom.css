@@ -1,0 +1,290 @@
+/**
+* ================================================
+* title：chatRoom.css
+* time: 2016-10-14
+* author: 杨凤玲
+* content: 聊天室（chatRomm.html）相关css
+* ================================================
+*/
+
+/* 待修复：
+1.聊天室高度自动无法撑开容器
+2.预加载h标签的bug
+ */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+}
+/************chatRoom.css************/
+.left {
+    float: left;
+}
+.right　{
+    float: right;
+}
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+#chat .container-fluid .row .list {
+    background-color: #32343a;
+    padding: 0;
+}
+#chat .container-fluid .row .list .icon {
+    display: inline-block;
+    width: 48px;
+    cursor: pointer;
+
+    float: right;
+}
+#chat .container-fluid .row .list .glyphicon {
+    color: #dedede;
+    /* 282a2e   7a7b7d*/
+    margin: 4px;
+}
+#chat .container-fluid .row .list .me {
+    width: 100%;
+    background-color: #282a2e;
+    padding: 10px;
+}
+#chat .container-fluid .row .list .me img {
+    display: inline-block;
+
+    position: relative;
+    top: -13px;
+}
+#chat .container-fluid .row .list .me h3 {
+    width:60px;
+    display:block;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    font: 15px SimHei;
+    color: #fff;
+    display: inline-block;
+    vertical-align: center;
+}
+#chat {
+    height: 325px;
+}
+#chat .container-fluid .row .list .me p {
+    font-size: 12px;
+    color: #fff;
+}
+#chat .container-fluid .row .list .me .text {
+    width: 98px;
+    display: inline-block;
+    margin: 5px;
+}
+#chat .container-fluid .row .list .search {
+    padding: 0 10px;
+    /* border-bottom: 1px solid #dedede; */
+}
+#chat .container-fluid .row .list .search input {
+    background-color: #32343a;
+    padding: 0 25px;
+
+}
+#chat .container-fluid .row .list .search span {
+    position: relative;
+    top: 30px;
+    left: 3px;
+}
+#chat .container-fluid .row .list .others {
+    margin: 10px;
+    line-height: .5em;
+    height: 100%;
+    overflow: auto;
+}
+
+#chat .container-fluid .row .list .others img {
+    margin: 7px 0;
+}
+#chat .container-fluid .row .list .others .one {
+    border-bottom: 1px solid #282a2e;
+    height: 65px
+}
+#chat .container-fluid .row .list .others h4 {
+    width:60px;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    font: 13px SimHei;
+    color: #fff;
+    display: block;
+    margin: 0 7px;
+}
+#chat .container-fluid .row .list .others h3 {
+    width: 90px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font: 12px SimHei;
+    color: #dedede;
+    display: inline-block;
+    margin: 0 7px;
+
+}
+#chat .container-fluid .row .list .others span {
+    position: relative;
+}
+#chat .container-fluid .row .list .others .one .box {
+    width: 100px;
+    display: inline-block;
+
+    position: relative;
+    top: 10px;
+}
+#chat .container-fluid .row .list .others .one .box2 {
+    width: 60px;
+    display: inline-block;
+    float: right;
+
+    position: relative;
+    top: 13px;
+    right: 15px;
+
+}
+#chat .container-fluid .row .list .others .box2 p {
+    font: 12px SimHei;
+    color: #dedede;
+    display: inline-block;
+
+}
+#chat .container-fluid .row .chat {
+    padding: 0;
+    background-color: #F8F8F8;
+    height: 100%;
+}
+#chat .container-fluid .row .title {
+    height: 50px;
+}
+#chat .container-fluid .row .title p {
+    text-align: center;
+    font: 16px SimHei;
+    display: inline-block;
+    width: 90%;
+    margin: 10px auto;
+}
+#chat .container-fluid .row .title span {
+    float: right;
+    margin: 10px;
+}
+#chat .container-fluid .row .content {
+    width: 100%;
+    height: 307px;
+    border: 1px solid #dedede;
+}
+#chat2 .content {
+    overflow: auto;
+}
+#chat2 .content .left {
+    width: 100%;
+}
+
+#chat2 .content .rightsend {
+    position:relative;
+    width: 200px;
+    height:auto;
+    background:#fff;
+    border-radius:5px; /* 圆角 */
+    display: inline-block;
+    padding: 5px 10px;
+    float: right;
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+}
+
+#chat2 .content .rightsend .rightarrow {
+    position:absolute;
+    top:5px;
+    right:-16px; /* 圆角的位置需要细心调试哦 */
+    width:0;
+    height:0;
+    font-size:0;
+    border:solid 8px;
+    border-color: transparent transparent transparent #fff;
+}
+#chat2 .content .leftsend {
+    position:relative;
+    width: 200px;
+    height:auto;
+    background:#fff;
+    border-radius:5px; /* 圆角 */
+    display: inline-block;
+    padding: 5px 10px;
+    float: left;
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+}
+#chat2 .content .leftsend .leftarrow {
+    position:absolute;
+    top:5px;
+    left:-16px; /* 圆角的位置需要细心调试哦 */
+    width:0;
+    height:0;
+    font-size:0;
+    border:solid 8px;
+    border-color: transparent #fff transparent transparent;
+}
+#chat .content img {
+    display: inline-block;
+    margin: 10px;
+}
+
+.wangEditor-container {
+    height: 191px;
+}
+.wangEditor-txt {
+    height: 100%;
+}
+
+
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* sm小屏幕（平板，[768~992)px ） */
+@media (min-width: 768px) {
+
+}
+
+/* md中等屏幕（桌面显示器，[992-1200)px ） */
+@media (min-width: 992px) {
+
+}
+
+/* lg大屏幕（大桌面显示器，1200+    ） */
+@media (min-width: 1200px) {
+
+
+}

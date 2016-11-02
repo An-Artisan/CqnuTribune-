@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+<title>slide</title>
+<link rel="stylesheet" type="text/css" href="css_new/reset_new.css">
+<script type="text/javascript" src="JS_nEW/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="JS_nEW/jquery.SuperSlide.2.1.js"></script>
+</head>
+<body>
+
+
+<style type="text/css">
+	/* slide之css */
+	.wall{ float:left; width:370px; height:370px; overflow:hidden;}
+	.focusBox { position: relative; width:370px; height:370px; overflow: hidden; }
+	.focusBox .pic{ position:relative; z-index:0; }
+	.focusBox .pic img { width:370px; height:370px; display: block; }
+	.focusBox .hd { width:100%; position: absolute; bottom: 10px; text-align: center; font-size:0; z-index:1; }
+	.focusBox .hd li{margin: 0 3px; background: url(images/dot.png) no-repeat 0 -16px; height: 16px; overflow: hidden; width: 16px; cursor: pointer;
+		display:inline-block; *display:inline; zoom:1;  _background: url(images/dot8.png) no-repeat 0 -16px;
+	}
+	.focusBox .hd .on{ background-position:0 0; }
+
+	.focusBox .prev,
+	.focusBox .next { width: 40px; height: 40px; margin: -20px 0 0; display: none; background: url(images/ad_ctr.png) no-repeat 0 0; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; filter:alpha(opacity=20);opacity:0.2;  }
+	.focusBox .prev { left: 7px; background-position: -5px -23px;}
+	.focusBox .next { right: 7px; background-position: -17px -113px; }
+	.focusBox .prev:hover,
+	.focusBox .next:hover { filter:alpha(opacity=50) !important;opacity:0.5 !important;  }
+
+</style>
+<div class="wall">
+	<div class="focusBox">
+        <ul class="pic">
+                <li><a href="http://www.htmlsucai.com" target="_blank"><img src="images/slide1.jpg"/></a></li>
+                <li><a href="http://www.htmlsucai.com" target="_blank"><img src="images/slide2.jpg"/></a></li>
+                <li><a href="http://www.htmlsucai.com" target="_blank"><img src="images/slide3.jpg"/></a></li>
+                <li><a href="http://www.htmlsucai.com" target="_blank"><img src="images/slide4.jpg"/></a></li>
+        </ul>
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+        <ul class="hd">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+	</div>
+</div>
+    <script type="text/javascript" src="JS_nEW/goodPlay.js"></script>
+</body>
+</html>

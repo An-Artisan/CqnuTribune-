@@ -1,0 +1,251 @@
+/**
+* ================================================
+* title：secondHands.css
+* time: 2016-10-7
+* author: 杨凤玲
+* content：secondHands.html相关css
+* ================================================
+*/
+
+
+/***********secondHands.css************/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+}
+.container {
+    width: 100%;
+}
+.row {
+    margin: 0;
+}
+.navbar {
+    margin-bottom: 0;
+}
+#section1 {
+    width: 100%;
+    padding: 35px 0;
+}
+#section1 .container .title h1 {
+    font-size: 22px;
+}
+#section1 .container .content .row div {
+    padding: 10px;
+}
+
+/* section2 css */
+#section2 nav {
+    width: 100%;
+    height: 55px;
+}
+#section2 ol li:last-child {
+    float: right;
+}
+.caption p,
+.caption h3 {
+    text-align: center;
+}
+
+/* section3 css */
+#section3 {
+    background-color: #eee;
+}
+#section3 .nav {
+    background-color: #F6FBFB;
+    padding: 0;
+    height: 500px;
+}
+#section3 .nav  ul li {
+    padding: 15px;
+    border-bottom: 1px solid #dedede;
+}
+
+#section3 .nav ul li a {
+    display: inline-block;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+}
+#section3 .nav ul li:first-child {
+    background-color: #dedede;
+    width: 100%;
+}
+#section3 .nav ul li:first-child a {
+    font-size: 22px;
+}
+#section3 .container {
+    width: 99%;
+    margin-top: 30px;
+}
+#section3 .container .media {
+    margin: 20px 0;
+}
+#section3 .container .main {
+    border: 1px solid #ddd;
+}
+#section3 .container .main .page {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+/* section4 over */
+#section4 {
+    border-bottom: 1px solid #dedede;
+    padding: 40px 0 20px;
+    font-family: Microsoft Hei;
+}
+#section4 .title {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+}
+#section4 .title p {
+    margin: 10px 0;
+    text-align: center;
+}
+#section4 .title p:first-child {
+    font-size: 25px
+}
+#section4 .title p:last-child {
+    font-size: 15px;
+    color: #999;
+}
+#section4 .contact {
+    width: 90%;
+    margin: 0 auto;
+}
+#section4 .contact .box {
+    border: 1px solid #efefef;
+    margin: 30px;
+
+/*父元素 利用table垂直居中 */
+    display: table;
+    width: 90%;
+}
+#section4 .contact .box img {
+    display: inline-block;
+    position: relative;
+    left: 10px;
+}
+#section4 .contact .box .text {
+
+/* 在父元素的基础上利用table属性垂直居中div */
+    display: table-cell;
+    vertical-align: middle;
+}
+#section4 .contact .box .text p:first-child {
+    font-size: 16px;
+}
+#section4 .contact .box .text p:last-child {
+    font-size: 14px;
+    color: #dedede;
+}
+
+/* footer css */
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #1b252e;
+    padding: 30px;
+}
+footer p,
+footer a {
+    text-align: center;
+    color: #8b939d;
+}
+footer .aboutme {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    border-top: 1px solid #313a43;
+}
+footer .aboutme a:hover {
+    color: #d80808;
+    text-decoration: none;
+}
+
+
+
+/* xs手机屏幕 [768~992)px ） */
+@media (max-width: 768px) {
+    #section1 .container .title h1 {
+        font-size: 28px;
+    }
+    .show1 {
+        width: 80px;
+        height: 80px;
+    }
+    #content .row,
+    footer {
+    font-size: 14px;
+   }
+}
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens [992,1200) */
+@media only screen and (max-width : 1200px) {
+    #section1 .container .title h1 {
+        font-size: 30px;
+    }
+    #goods .hot {
+    border-left: 1px solid #dedede;
+    }
+    #goods .hot span {
+    margin: 0 15px;
+    }
+    #goods .hot h2 {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    background-color: #FDFEFF;
+    font-size: 18px;
+    line-height: 40px;
+    }
+    #content .row,
+    footer {
+    font-size: 14px;
+   }
+    #content .row .col-xs-3 img {
+    width: 110px;
+    height: 110px;
+    }
+}
+
+/* Medium Devices, Desktops [768,992) */
+@media only screen and (max-width : 992px) {
+    #section1 .container .title h1 {
+        font-size: 28px;
+    }
+    .show1 {
+        width: 80px;
+        height: 80px;
+    }
+    #content .row,
+    footer {
+    font-size: 14px;
+   }
+}
+
+/* Small Devices, Tablets [480,768) */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones [320,480) */
+@media only screen and (max-width : 480px) {
+    #content .row .col-xs-3 img {
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+/* Custom, iPhone Retina [320,) */
+@media only screen and (max-width : 320px) {
+
+}
+

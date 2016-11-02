@@ -1,0 +1,244 @@
+
+/**
+* ================================================
+* title：details.css
+* time: 2016-10-22
+* author: 杨凤玲
+* content: 商品细节以及评论界面details.html的相关样式
+* ================================================
+*/
+
+/**********************************/
+/***********details.css************/
+
+/* goods */
+#goods {
+    margin-top: 20px;
+}
+#goods .title {
+    margin: 0 0 15px 0;
+}
+#goods .title h1 {
+    font-size: 18px;
+}
+#goods .img {
+    display: inline-block;
+    margin: 0 auto;
+}
+#goods .price {
+    width: 100%l;
+    height: 90px;
+    background-color: #DCEAFF;
+}
+#goods .description {
+    width: 100%;
+    height: auto;
+    background-color: #dedede;
+    padding: 10px 5px;
+}
+#goods .price p:first-child span {
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #1E619D;
+}
+#goods .price p {
+    padding: 5px;
+}
+#goods .price s {
+    display: inline-block;
+}
+#goods .price p:nth-of-type(2) {
+    width: 100px;
+    display: inline-block;
+}
+#goods .price p:nth-of-type(3) {
+    display: inline-block;
+}
+#goods i {
+    margin: 10px;
+}
+/* #goods .show1 {
+    max-height: 120px;
+    max-width: 120px;
+}
+#goods .show2 {
+    max-height: 150px;
+    max-width: 150px;
+
+} */
+#goods .more {
+    border: 1px solid #dedede;
+    margin: 15px 0;
+}
+#goods .more img {
+    display: inline-block;
+    margin: 13px 0;
+}
+#goods .col-md-3 {
+    padding: 0;
+}
+#goods .button button:first-child {
+    cursor: auto;
+}
+#goods .hot {
+    border-left: 1px solid #dedede;
+}
+#goods .hot span {
+    margin: 0 15px;
+}
+#goods .hot h2 {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    background-color: #FDFEFF;
+    font-size: 16px;
+    line-height: 40px;
+}
+#goods .hot img {
+    margin: 13px 0;
+}
+#goods .hot ol {
+    padding: 0px;
+}
+#goods .hot ol li {
+    margin: 10px;
+}
+
+/* content css */
+.content {
+    margin: 20px 0;
+}
+#content .row {
+    border: 1px solid #dedede;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+#content button {
+    display: block;
+}
+#content .btn {
+    padding: 6px;
+}
+#editor {
+    margin: 30px 0;
+}
+#editor .div1{
+    height: 200px;
+    width: 100%;
+}
+#editor .btn {
+    width: 70px;
+    background-color: #efefef;
+}
+#content .row .col-xs-3 img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+#content .row .btn {
+    padding: 3px;
+    margin: 5px auto;
+}
+#content .row .col-xs-3 p {
+    text-align: center;
+}
+#content .row .col-xs-3 {
+    border-right: 1px solid #dedede;
+    padding: 10px 5px;
+}
+
+#content .row .col-xs-9 {
+    padding-left: 0;
+    position: relative;
+}
+#content .row .time {
+    border-bottom: 1px solid #dedede;
+    padding: 10px 0 10px 10px;
+}
+#content .row .content {
+    padding-left: 10px;
+}
+#content .row .supo {
+    width: 97%;
+    border-top: 1px solid #ddd;
+    margin: 0 auto;
+    padding-left: 10px;
+
+    position: relative;
+    bottom: -50px;
+}
+
+
+/* footer css */
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #1b252e;
+    padding: 30px;
+}
+footer p,
+footer a {
+    text-align: center;
+    color: #8b939d;
+}
+footer .aboutme {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    border-top: 1px solid #313a43;
+}
+footer .aboutme a:hover {
+    color: #d80808;
+    text-decoration: none;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #goods .hot {
+        margin: 15px 0;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    body {
+        font-size: 12px;
+    }
+    #content .row {
+        font-size: 12px;
+    }
+    #goods .title h1 {
+        font-size: 15px;
+    }
+    #goods .hot {
+        margin: 15px 0;
+    }
+    #goods .hot h2 {
+        font-size: 14px;
+    }
+    #content .row .col-xs-3 img {
+        width: 50px;
+        height: 50px;
+
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
