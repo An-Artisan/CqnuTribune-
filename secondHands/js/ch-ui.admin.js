@@ -1,15 +1,3 @@
-/* 
-* @Author: ChenHua <276004561@qq.com>
-* @Date:   2015-09-14 21:11:36
-* @Last Modified by:   ChenHua
-* @Last Modified time: 2015-11-21 16:01:10
-*/
-
-//静止使用框架引用页面
-// if(top != self){  
-//     top.location.href=self.location.href;
-// }
-
 //左侧点击事件
 $(function(){
 	$('.sub_menu').find('li').click(function(){

@@ -10,6 +10,8 @@
 class GetIp{
     protected  $realip = null;
     // 真实的IP地址
+    protected  $server_ip = null;
+    // 服务器的真实IP地址
     public function get_ip(){
         if (isset($_SERVER)){
                 if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])){
@@ -22,6 +24,18 @@ class GetIp{
             } 
                     return $realip;
                     // 返回IP
+        }
+    public function get_server_ip() { 
+        if (isset($_SERVER)) { 
+            if($_SERVER['SERVER_ADDR']) {
+                $server_ip = $_SERVER['SERVER_ADDR']; 
+            } else { 
+                $server_ip = $_SERVER['LOCAL_ADDR']; 
+            } 
+        } else { 
+            $server_ip = getenv('SERVER_ADDR');
+        } 
+        return $server_ip; 
         }
     }
 

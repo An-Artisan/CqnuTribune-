@@ -47,6 +47,7 @@
     background: transparent;
 }
 #chat .container-fluid .row .list {
+    height:548px;
     background-color: #32343a;
     padding: 0;
 }
@@ -113,10 +114,14 @@
     left: 3px;
 }
 #chat .container-fluid .row .list .others {
-    margin: 10px;
+/*    margin: 10px;
     line-height: .5em;
-    height: 100%;
-    overflow: auto;
+    height: 100%;*/
+    /*overflow: auto;*/
+        margin: 10px;
+    line-height: .5em;
+    height: 399px;
+    overflow-y: scroll;
 }
 
 #chat .container-fluid .row .list .others img {
@@ -201,6 +206,9 @@
     height: 307px;
     border: 1px solid #dedede;
 }
+#chat2{
+    height: 548px;
+}
 #chat2 .content {
     overflow: auto;
 }
@@ -254,6 +262,13 @@
     font-size:0;
     border:solid 8px;
     border-color: transparent #fff transparent transparent;
+}
+.no-content{
+    height:305px;
+    line-height: 305px;
+    text-align: center;
+    font-size: 30px;
+    color:#a3a8b0;
 }
 #chat .content img {
     display: inline-block;

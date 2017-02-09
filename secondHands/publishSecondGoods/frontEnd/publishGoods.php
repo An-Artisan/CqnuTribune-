@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../font/css/font-awesome.min.css">
     <script type="text/javascript" src="../../../styles/layui/layui.js"></script>
     <script type="text/javascript" src="../../../styles/js/jquery-3.1.1.min.js"></script>
+    <script src="../../../styles/js/loading.js"></script>
     <script type="text/javascript" src="js/publishGoods.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
                                     // 引入所有类
                                     $select = Select::create_singleton();
                                     // 获得查询对象
-                                    $sql = "select * from secondhand.goods_top_type;";
+                                    $sql = "select * from secondhand.goods_top_type order by top_sort";
                                     // 查询所有的分类(这里主要是有可能管理员会添加分类)
                                     $result = $select->select($sql);
                                     // 得到结果集
@@ -86,7 +87,7 @@
                                 <?php 
                                     $select = Select::create_singleton();
                                     // 获取查询对象
-                                    $sql = "select * from secondhand.goods_address;";
+                                    $sql = "select * from secondhand.goods_address order by address_sort";
                                     // 查询所有的地址(也有可能后台会添加地址)
                                     $result = $select->select($sql);
                                     // 获得结果集

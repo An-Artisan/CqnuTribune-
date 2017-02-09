@@ -13,7 +13,7 @@
         var setting = {
             type: 'POST',
             // POST提交
-            url:'http://localhost/CqnuTribune/chatRoom/backStage/message_push.php',
+            url:'../backStage/message_push.php',
             // PHP接收地址
             dataType:'json',
             // 返回json格式

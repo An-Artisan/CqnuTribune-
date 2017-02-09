@@ -66,6 +66,7 @@
     color: #000;
     font-size: 16px;
 }
+
 #section3 .nav ul li:first-child {
     background-color: #dedede;
     width: 100%;
@@ -141,7 +142,13 @@
     font-size: 14px;
     color: #dedede;
 }
-
+.no-content{
+    height:500px;
+    line-height: 500px;
+    text-align: center;
+    font-size: 30px;
+    color:#a3a8b0;
+}
 /* footer css */
 footer {
     width: 100%;

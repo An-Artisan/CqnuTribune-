@@ -33,19 +33,7 @@
         'img',
      ];
 
-     // 仅仅想移除某几个菜单，例如想移除『插入代码』和『全屏』菜单：
-     // 其中的 wangEditor.config.menus 可获取默认情况下的菜单配置
-     // editor.config.menus = $.map(wangEditor.config.menus, function(item, key) {
-     //     if (item === 'insertcode') {
-     //         return null;
-     //     }
-     //     if (item === 'fullscreen') {
-     //         return null;
-     //     }
-     //     return item;
-     // });
-
-      editor.config.uploadImgUrl = 'http://localhost/CqnuTribune/chatRoom/backStage/upload.php';
+      editor.config.uploadImgUrl = '../backStage/upload.php';
       // 添加上传图片后台地址
       editor.config.hideLinkImg = true;
       // 隐藏网络路径图片引用功能
@@ -55,3 +43,4 @@
       // 创建编辑器
       editor.$txt.html('<p><br></p>');
       // 清空编辑器
+      

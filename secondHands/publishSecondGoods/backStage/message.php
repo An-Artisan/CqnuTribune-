@@ -6,7 +6,7 @@ $user =  $_SESSION['user'];
 $item_number = $_POST['item_number'];
 $time = date("Y-m-d H:i:s",time());
 $insert = Insert::create_singleton();
-$arrayName = array('item_number' => "$item_number", 'comment_time' => "$time" , 'comment_content' => "$content",'comment_name'=>"$user" );
+$arrayName = array('item_number' => "$item_number", 'comment_time' => "$time" , 'comment_content' => "$content",'comment_name'=>"$user" , 'comment_isread' => 0);
 if($insert->insert('secondhand.goods_comment',$arrayName)){
 	exit(json_encode(array('state' =>'1')));
 }

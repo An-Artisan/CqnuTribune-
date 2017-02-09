@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper {
+    background:url(../img/1.jpg) no-repeat;
+    background-size: cover;
+}
+/* nav css */
+nav {
+    padding: 50px 40px;
+}
+nav .logo {
+    width: 50%;
+    float: left;
+}
+nav .logo img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-right: 20px;
+}
+nav .logo h1 {
+    font: bold 22px Microsoft Yahei;
+    display: inline-block;
+    width: 100px;
+}
+nav ul {
+    float: right;
+    width: 200px;
+}
+nav ul li {
+    color: #fff;
+    float: left;
+}
+nav ul li a {
+    color: #fff;
+}
+.footer p {
+    text-align: center;
+}
+
+/* section1 css */
+#section1 {
+    width: 80%;
+    clear: both;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#section1 .one {
+    height: 300px;
+/*     border: 1px solid #dedede; */
+}
+#section1 .one .box h2 {
+    width: 100%;
+    background-color: #dedede;
+    height: 50px;
+}
+#mooc a {
+    color: #333;
+    text-decoration: none;     /* 超链接样式 */
+}
+#mooc a:hover {
+    color: #7EC5FF;
+}
+#mooc {
+    overflow: hidden;
+    background-color: rgba(233, 245, 255, 0.5);
+    font-size: 12px;
+    line-height: 24px;
+    text-algin: center;        /* 页面内容居中 */
+
+    border: 5px solid #ababab;
+    -moz-border-radius: 15px;      /* Gecko browsers */
+    -webkit-border-radius: 15px;   /* Webkit browsers */
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #ababab;
+    margin: 50px auto 0;
+    text-align: left;               /* 让新闻内容靠左 */
+}
+/*  头部样式 */
+#moocTitle {
+    height: 62px;
+    overflow: hidden;  /* 这个一定要加上，内容超出的部分要隐藏，免得撑高头部 */
+    font-size: 26px;
+    line-height: 62px;
+    padding-left: 30px;
+    background-color: rgba(48, 101, 163, 0.8);
+    -moz-border-radius: 8px 8px 0 0;      /* Gecko browsers */
+    -webkit-border-radius: 8px 8px 0 0;   /* Webkit browsers */
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    position: relative;
+}
+/*  底部样式 */
+#moocBot {
+    width: 399px;
+    height: 10px;
+    overflow: hidden;     /* 这个一定要加上，内容超出的部分要隐藏，免得撑高底部结构 */
+}
+/*  中间样式 */
+#moocBox {
+    height: 144px;
+    width: 335px;
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: hidden;    /*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+}
+#mooc ul li {
+    height: 24px;
+}
+#mooc ul li a {
+    min-width: 130px;
+    float: left;
+    display: block;
+    overflow: hidden;
+    text-indent: 15px;
+    height: 24px;
+
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+#section1 button {
+    position: relative;
+    left: 30%;
+}
+#section1 .one .box2 {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(233, 245, 255, 0.5);
+
+    height: 225px;
+    font-size: 12px;
+    line-height: 24px;#75D1FF
+    text-algin: center;        /* 页面内容居中 */
+
+    border: 5px solid #ababab;
+    -moz-border-radius: 15px;      /* Gecko browsers */
+    -webkit-border-radius: 15px;   /* Webkit browsers */
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #ababab;
+    margin: 50px auto 0;
+}
+#section1 .one .title {
+    height: 62px;
+    overflow: hidden;  /* 这个一定要加上，内容超出的部分要隐藏，免得撑高头部 */
+    font-size: 26px;
+    line-height: 62px;
+    padding-left: 30px;
+    background-color: rgba(48, 101, 163, 0.8);
+    -moz-border-radius: 8px 8px 0 0;      /* Gecko browsers */
+    -webkit-border-radius: 8px 8px 0 0;   /* Webkit browsers */
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    position: relative;
+}
+#section1 .one .title a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: inline;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+}
+#section1 .box2 .photo img {
+    margin: 5px 0;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 8px;      /* Gecko browsers */
+    -webkit-border-radius: 8px;   /* Webkit browsers */
+    border-radius: 8px;
+}
+#section1 .box2 .page {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    width: 77px;
+}
+#section1 .info p {
+    padding: 5px 20px;
+}
+#section1 .info a {
+    margin-left: 15px;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    #section1 .one .title {
+        font-size: 26px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #section1 .one .title {
+        font-size: 15px;
+    }
+    #section1 .box2 .photo img {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    nav {
+        font-size: 12px;
+        padding: 30px 10px;
+    }
+    nav ul {
+        width: 150px;
+    }
+    nav .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    #section1 .one .title {
+        font-size: 13px;
+    }
+    #section1 .one .title {
+        font-size: 15px;
+    }
+    #section1 .box2 .photo img {
+        width: 50px;
+        height: 50px;
+        margin: 5px 0;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    nav .logo h1 {
+        font-size: 15px;
+        width: 50px;
+    }
+    #section1 .one .title {
+        font-size: 12px;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+}

@@ -35,7 +35,7 @@ function ajax_delete(e){
 // 这里的e就是传过来的this
     $.ajax({  
          type : "post",  
-          url : "http://localhost/CqnuTribune/secondHands/publishSecondGoods/backStage/deleteGoods.php",  
+          url : "../backStage/deleteGoods.php",  
           dataType:'json',
           data : {
                 content: e.name,
@@ -68,7 +68,7 @@ function ajax_delete(e){
 function ajax_success(e){
     $.ajax({  
          type : "post",  
-          url : "http://localhost/CqnuTribune/secondHands/publishSecondGoods/backStage/successGoods.php",  
+          url : "../backStage/successGoods.php",  
           dataType:'json',
           data : {
                 content: e.name,

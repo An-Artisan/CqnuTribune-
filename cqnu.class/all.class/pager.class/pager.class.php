@@ -39,8 +39,47 @@ class Pager {
 
          $this->_initPagerLegal();    
     }    
+  /**   
+    * bootstrap分页 
+    *   
+    * @return curpage 当前页    count 总页数    eachpage 一页显示记录数
+    */
+ public  function pagination($curpage, $count, $eachpage)
+    {
+        $retData = array();
 
-        
+        $retData['first_row'] = ($curpage - 1) * $eachpage;
+        $retData['end_row'] = $retData['first_row'] + $eachpage; 
+        $pages = ceil($count / $eachpage); 
+        $retData['total_pages'] = (int)$pages;
+
+        $html = ' <ul class="pagination"> <li><a href="#" data-page="1" aria-label="Previous">首页 </a></li>';
+        $page_start = ($curpage == 1) ? $curpage : ($curpage - 1);
+        $page_end = $curpage + 1;
+        if ($page_end > $pages)
+            $page_end = $pages; 
+
+        if ($page_start > 1) {
+            $html .= "<li  data-page='0' class='disabled' ><a class='disable'>...</a></li>";
+        }
+
+        for ($i = $page_start; $i <= $page_end; $i ++) {
+            $html = $html."<li ";
+            if ($i == $curpage)
+                $html .= "class='active'";
+            $html .= "><a   data-page='" . $i . "'>" . $i . "</a></li>";
+        }
+
+        if (($curpage + 1) < $pages) {
+            $html .= "<li  data-page='0' class='disabled' ><a class='disable'>...</a></li>";
+        }
+
+        $html .= '<li><a href="#" data-page="' . $pages . '" aria-label="Next"> 末页 </a></li> </ul>';
+
+        $retData['html'] = $html;
+        return $retData;
+
+    }
   /**   
     * 获取去除page部分的当前URL字符串   
     *   
@@ -87,17 +126,16 @@ class Pager {
 //$this->pageUrl}={$i}    
 //{$this->CurrentUrl}={$this->TotalPages}    
     public function GetPagerContent() {    
-        // $str = "<div class=\"Pagination\">";    
-        $str=null; 
-        //首页 上一页   
+        $str = "<div class=\"Pagination\">";    
+        //首页 上一页    
         if($this->pageIndex==1)    
         {    
-            $str .="<li><a href='javascript:void(0)' class='tips' title='首页'>首页</a></li> "."\n";    
-            $str .="<li><a href='javascript:void(0)' class='tips' title='上一页'>上一页</a></li> "."\n"."\n";    
+            $str .="<a href='javascript:void(0)' class='tips' title='首页'>首页</a> "."\n";    
+            $str .="<a href='javascript:void(0)' class='tips' title='上一页'>上一页</a> "."\n"."\n";    
         }else   
         {    
-            $str .="<li><a href='{$this->pageUrl}=1' class='tips' title='首页'>首页</a></li> "."\n";  
-                    $str .="<li><a href='{$this->pageUrl}=".($this->pageIndex-1)."' class='tips' title='上一页'>上一页</a><li> "."\n"."\n";    
+            $str .="<a href='{$this->pageUrl}=1' class='tips' title='首页'>首页</a> "."\n";    
+                    $str .="<a href='{$this->pageUrl}=".($this->pageIndex-1)."' class='tips' title='上一页'>上一页</a> "."\n"."\n";    
         }    
 
             
@@ -119,7 +157,7 @@ class Pager {
                        {    $currnt=" class='current'";}    
                        else   
                        {    $currnt="";    }    
-                        $str .="<li><a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a></li>"."\n" ;    
+                        $str .="<a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a>"."\n" ;    
             }    
          }else                                //10页以上    
          {   if($this->pageIndex<3)  //当前页小于3    
@@ -130,14 +168,14 @@ class Pager {
                            {    $currnt=" class='current'";}    
                          else   
                          {    $currnt="";    }    
-                        $str .="<li><a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a></li>"."\n" ;    
+                        $str .="<a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a>"."\n" ;    
                      }    
 
                      $str.="<span class=\"dot\">……</span>"."\n";    
 
                  for($i=$this->totalPagesCount-3+1;$i<=$this->totalPagesCount;$i++)//功能1    
                  {    
-                      $str .="<li><a href='{$this->pageUrl}={$i}' >$i</a></li>"."\n" ;    
+                      $str .="<a href='{$this->pageUrl}={$i}' >$i</a>"."\n" ;    
 
                  }    
              }elseif($this->pageIndex<=5)   //   5 >= 当前页 >= 3    
@@ -148,14 +186,14 @@ class Pager {
                        {    $currnt=" class='current'";}    
                        else   
                        {    $currnt="";    }    
-                        $str .="<li><a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a></li>"."\n" ;    
+                        $str .="<a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a>"."\n" ;    
 
                  }    
                  $str.="<span class=\"dot\">……</span>"."\n";    
 
                  for($i=$this->totalPagesCount-3+1;$i<=$this->totalPagesCount;$i++)//功能1    
                  {    
-                      $str .="<li><a href='{$this->pageUrl}={$i}' >$i</a></li>"."\n" ;    
+                      $str .="<a href='{$this->pageUrl}={$i}' >$i</a>"."\n" ;    
 
                  }    
 
@@ -165,7 +203,7 @@ class Pager {
 
                  for($i=1;$i<=3;$i++)    
                  {    
-                     $str .="<li><a href='{$this->pageUrl}={$i}' >$i</a></li>"."\n" ;    
+                     $str .="<a href='{$this->pageUrl}={$i}' >$i</a>"."\n" ;    
                  }    
                   $str.="<span class=\"dot\">……</span>";                 
                  for($i=$this->pageIndex-1 ;$i<=$this->pageIndex+1 && $i<=$this->totalPagesCount-5+1;$i++)    
@@ -174,13 +212,13 @@ class Pager {
                        {    $currnt=" class='current'";}    
                        else   
                        {    $currnt="";    }    
-                        $str .="<li><a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a></li>"."\n" ;    
+                        $str .="<a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a>"."\n" ;    
                  }    
                  $str.="<span class=\"dot\">……</span>";    
 
                  for($i=$this->totalPagesCount-3+1;$i<=$this->totalPagesCount;$i++)    
                  {    
-                      $str .="<li><a href='{$this->pageUrl}={$i}' >$i</a><li>"."\n" ;    
+                      $str .="<a href='{$this->pageUrl}={$i}' >$i</a>"."\n" ;    
 
                  }    
              }else   
@@ -188,7 +226,7 @@ class Pager {
 
                   for($i=1;$i<=3;$i++)    
                  {    
-                     $str .="<li><a href='{$this->pageUrl}={$i}' >$i</a></li>"."\n" ;    
+                     $str .="<a href='{$this->pageUrl}={$i}' >$i</a>"."\n" ;    
                  }    
                   $str.="<span class=\"dot\">……</span>"."\n";    
 
@@ -198,7 +236,7 @@ class Pager {
                        {    $currnt=" class='current'";}    
                        else   
                        {    $currnt="";    }    
-                        $str .="<li><a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a></li>"."\n" ;    
+                        $str .="<a href='{$this->pageUrl}={$i} ' {$currnt}>$i</a>"."\n" ;    
 
                  }    
             }           
@@ -217,15 +255,15 @@ class Pager {
         //下一页 末页    
         if($this->pageIndex==$this->totalPagesCount)    
         {       
-            $str .="\n"."<li><a href='javascript:void(0)' class='tips' title='下一页'>下一页</a></li>"."\n" ;    
-            $str .="<li><a href='javascript:void(0)' class='tips' title='末页'>末页</a></li>"."\n";    
-            $str .="<li><a href='' class='tips' title='末页'>当前第$this->pageIndex 页</a></li>"."\n"; 
+            $str .="\n"."<a href='javascript:void(0)' class='tips' title='下一页'>下一页</a>"."\n" ;    
+            $str .="<a href='javascript:void(0)' class='tips' title='末页'>末页</a>"."\n";    
+            $str .="<a href='' class='tips' title='末页'>当前第$this->pageIndex 页</a>"."\n"; 
                 
         }else   
         {    
-            $str .="\n"."<li><a href='{$this->pageUrl}=".($this->pageIndex+1)."' class='tips' title='下一页'>下一页</a></li> "."\n";    
-            $str .="<li><a href='{$this->pageUrl}={$this->totalPagesCount}' class='tips' title='末页'>末页</a></li> "."\n" ;
-            $str.= "<li><a  href='' class='tips' title='末页'>第$this->pageIndex 页</a></li> "."\n" ;  
+            $str .="\n"."<a href='{$this->pageUrl}=".($this->pageIndex+1)."' class='tips' title='下一页'>下一页</a> "."\n";    
+            $str .="<a href='{$this->pageUrl}={$this->totalPagesCount}' class='tips' title='末页'>末页</a> "."\n" ;
+            $str.= "<a  href='' class='tips' title='末页'>当前第$this->pageIndex 页</a> "."\n" ;  
         }           
 
         $str .= "</div>";    

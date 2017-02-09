@@ -59,15 +59,6 @@
 #goods i {
     margin: 10px;
 }
-/* #goods .show1 {
-    max-height: 120px;
-    max-width: 120px;
-}
-#goods .show2 {
-    max-height: 150px;
-    max-width: 150px;
-
-} */
 #goods .more {
     border: 1px solid #dedede;
     margin: 15px 0;
@@ -110,7 +101,17 @@
 .content {
     margin: 20px 0;
 }
-#content .row {
+#content .prompt {
+    background-color: #dceaff;
+    margin-bottom: 0;
+}
+#content .prompt p {
+    text-align: center;
+    font: 26px Microsoft Yahei;
+    padding: 10px 0;
+    border: none;
+}
+#content .message {
     border: 1px solid #dedede;
     font-size: 15px;
     margin-bottom: 15px;
@@ -170,29 +171,21 @@
     position: relative;
     bottom: -50px;
 }
-
-
-/* footer css */
-footer {
-    width: 100%;
-    height: auto;
-    background-color: #1b252e;
-    padding: 30px;
-}
-footer p,
-footer a {
-    text-align: center;
-    color: #8b939d;
-}
-footer .aboutme {
-    width: 60%;
+#content .page {
+    width: 250px;
+    display: block;
     margin: 0 auto;
-    padding: 30px 0 20px;
-    border-top: 1px solid #313a43;
 }
-footer .aboutme a:hover {
-    color: #d80808;
-    text-decoration: none;
+#content .no-content {
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 200px;
+    border: 1px solid #F8F8F8;
+}
+#content .no-content p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
 }
 
 /*==========  Non-Mobile First Method  ==========*/
@@ -234,8 +227,28 @@ footer .aboutme a:hover {
     #content .row .col-xs-3 img {
         width: 50px;
         height: 50px;
-
     }
+    #content .prompt p {
+        font-size: 15px;
+    }
+    #content .no-content {
+        height: 100px;
+    }
+    #content .no-content p {
+        font-size: 14px;
+        line-height: 100px;
+    }
+    #content .page {
+        width: 177px;
+    }
+    #content .page .pagination1 {
+        width: 177px;
+    }
+    #content .page .pagination1 a {
+        width:10px;
+        font-size: 12px;
+    }
+
 }
 
 /* Custom, iPhone Retina */

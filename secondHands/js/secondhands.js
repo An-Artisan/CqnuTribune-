@@ -15,7 +15,7 @@ $("#category li").each(function(){
     $(this).click(function(){
  	if($(this).attr('id')!='top'){
  		// 第一个li的分类详情不能点击
-   	window.location.href="http://localhost/CqnuTribune/secondHands/index/secondHands.php?category_name="+$(this).children('a').first().attr('name'); 
+   	window.location.href="../index/secondHands.php?category_name="+$(this).children('a').first().attr('name'); 
 	}
 });
 });

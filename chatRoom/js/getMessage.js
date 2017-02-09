@@ -45,19 +45,20 @@ for(var i = 0;i < friendList.length;i ++){
         // 更改与某人聊天的昵称
         $('#content').html('');
         // 清空聊天记录区的内容
-
+        var friend_head = jQuery(this).children("img").first().attr('src');
         //=====接受全部聊天记录开始=====
         $(function(){
             var get_all_content = {
                 type: 'POST',
                 // POST提交
-                url:'http://localhost/CqnuTribune/chatRoom/backStage/get_all_content.php',
+                url:'../backStage/get_all_content.php',
                 // 接受PHP地址
                 dataType:'json',
                 // 返回数据格式：json
                 data:{sender:$('#sender').text(),getter:$('#getter').text()},
                 // 提交的数据
                 success:function(data){
+
                  var all_record = '';
                     // 设置接受所有聊天记录的变量
                  var content = '';
@@ -67,10 +68,10 @@ for(var i = 0;i < friendList.length;i ++){
                     // 循环json内容
                     if(data[i]== sender){
                     // 判断消息左右的摆放
-                    all_record += '<div class="left"><img src="../img/head.jpg" height="40" width="40" alt="head portrait" class="img-circle" style="float:left;"><div class="leftsend"><p>'+data[++i]+''+ data[++i] + '</p><div class="leftarrow"></div></div></div>';
+                    all_record += '<div class="left"><img src="'+$("#head").attr("src")+'" height="40" width="40" alt="head portrait" class="img-circle" style="float:left;"><div class="leftsend"><p>'+data[++i]+''+ data[++i] + '</p><div class="leftarrow"></div></div></div>';
                    }
                    else{
-                    all_record += '<div class="right"><img src="../img/head.jpg" height="40" width="40" alt="head portrait" class="img-circle" style="clear: both;float:right;"><div class="rightsend"><p>'+data[++i]+''+ data[++i] + '</p><div class="rightarrow"></div></div></div>';
+                    all_record += '<div class="right"><img src="'+ friend_head +'" height="40" width="40" alt="head portrait" class="img-circle" style="clear: both;float:right;"><div class="rightsend"><p>'+data[++i]+''+ data[++i] + '</p><div class="rightarrow"></div></div></div>';
                    }
                    // all_record 获取总和记录
                  }
@@ -95,7 +96,7 @@ for(var i = 0;i < friendList.length;i ++){
                 var setting = {
                 type: 'POST',
                 // POST提交
-                url:'http://localhost/CqnuTribune/chatRoom/backStage/get_content.php',
+                url:'../backStage/get_content.php',
                 // PHP接收地址
                 dataType:'json',
                 // 返回json格式
@@ -109,7 +110,7 @@ for(var i = 0;i < friendList.length;i ++){
                         长轮询的时候导致的。所以这里要判断data[0] 不为空。不然会
                         输出undefined。
                    */
-                   var all_data = '<div class="right"><img src="../img/head.jpg" height="40" width="40" alt="head portrait" class="img-circle" style="clear: both;float:right;"><div class="rightsend"><p>'+data[0]+''+ data[1] + '</p><div class="rightarrow"></div></div></div>';
+                   var all_data = '<div class="right"><img src="' + friend_head + '" height="40" width="40" alt="head portrait" class="img-circle" style="clear: both;float:right;"><div class="rightsend"><p>'+data[0]+''+ data[1] + '</p><div class="rightarrow"></div></div></div>';
                    //  获取好友给当前用户发的信息 data[0]是聊天记录，data[1]是发送时间
                    $("#content").append(all_data);
                     //  添加到聊天区(追加方式)

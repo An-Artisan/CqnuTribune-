@@ -112,13 +112,13 @@
 
 	//======验证码类实例开始======
 	// session_start();
-	// //开启session，一定要在实例化Code对象前开启
+	//开启session，一定要在实例化Code对象前开启
 	// $code = new Code();
-	// //实例化验证码GD库类
+	//实例化验证码GD库类
 	// $code->make();
-	// //显示验证码
+	//显示验证码
 	// $_SESSION['code'] = $code->get();
-	//把验证码存进session
+	// 把验证码存进session
 	// echo $_SESSION['code'];
 	// //输出。
 
@@ -151,15 +151,15 @@
 
     //======密码加密类实例开始======
 	// $encrypt = Encrypt::create_singleton();
-    // // 实例化Encrypt对象(静态方法获取对象)
-	// $encrypt_password =  $encrypt -> encrypt('yatou19941209');
+ //    // 实例化Encrypt对象(静态方法获取对象)
+	// $encrypt_password =  $encrypt -> encrypt('administratorHelloWorld');
 	// //给密码加密
 	// echo $encrypt_password;
 	// //输出加密后的字符串
 	// echo '<br>';
 	// //换行
 	// var_dump($encrypt->verify('yatou19941209',$encrypt_password));
-	//验证输入的密码和加密后的密码是否一致 返回值1/0。 
+	// 验证输入的密码和加密后的密码是否一致 返回值1/0。 
 	//======密码加密类实例结束======
 
 	
@@ -190,9 +190,9 @@
 
     //======缩略图剪裁开始======
 	//使用方法：  
-	// $_path = './chatRoom/demo/1.jpg';  
+	// $_path = './all.class/waterprint.class/waterprint.png';  
 	// $_img = new Image($_path);//$_path为图片文件的路径  
-	// $_img->thumb(300, 300);  
+	// $_img->thumb(100, 100);  
 	// $_img->out();  
 	//======缩略图剪裁结束======
 	
@@ -215,7 +215,23 @@
 	// //输出水印图片文件覆盖到输入的图片文件 
  	//======水印类实例结束======
     // }
+ 	//======敏感词汇过滤类开始======
 
+	// $filter = new SensitiveWordFilter(__DIR__ . '/all.class/sendsitivewordfilter/words.txt');
+ 	// //初始化对象
+	/*
+	初始化传入词库文件路径，词库文件每个词一个换行符。
+	如：
+	敏感1
+	敏感2
+	第一个参数传入要过滤的字符串，第二个是匹配的字间距，
+	比如'枪支'是一个敏感词，想过滤'枪||||支'的时候，
+	就需要指定一个两个字的间距，可以根据情况设定，
+	超过指定间距就不会过滤。所有匹配的敏感词会被替换为'*'。
+	*/
+	// echo $filter->filter('大鸡巴',0);
+	// //敏感词开始过滤
+	//======敏感词汇过滤类结束======
 
 
 	 ?>

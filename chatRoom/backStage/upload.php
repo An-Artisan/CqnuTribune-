@@ -12,7 +12,7 @@
     */
     require '../../cqnu.class/all.class/all.class.php';
     // 引用全部类
-    define("THIS_PATH", dirname(__FILE__)."/images/"); 
+    define("THIS_PATH", "../frontEnd/images/"); 
     // 定义当前路径下面的images为一个常量
     //======单文件或者多文件上传类实例开始======
     $up = new fileupload();
@@ -27,31 +27,31 @@
     if($up -> upload("myFileName")) {
       //使用对象中的upload方法， 就可以上传文件，方法需要传一个上传表单的名字 pic, 如果成功返回true, 失败返回false
     //======缩略图剪裁开始======
-    $_path = THIS_PATH.$up->getFileName();  
-    $_img = new Image($_path);//$_path为图片文件的路径  
-    $_img->thumb(300, 150);  
-    $_img->out();  
+    // $_path = THIS_PATH.$up->getFileName();  
+    // $_img = new Image($_path);//$_path为图片文件的路径  
+    // $_img->thumb(500, 500);  
+    // $_img->out();  
     //======缩略图剪裁结束======
 
     //======水印类实例开始======
-    $waterprint = new WaterMask(THIS_PATH.$up->getFileName()); 
-    //实例化对象 里面放图片路径
-    $waterprint->waterImg = THIS_PATH.'waterprint.png'; 
-    //水印图片路径
-    $waterprint->transparent = 45; 
-    //水印透明度 
-    $waterprint->pos = 10;  
+    // $waterprint = new WaterMask(THIS_PATH.$up->getFileName()); 
+    // //实例化对象 里面放图片路径
+    // $waterprint->waterImg = THIS_PATH.'waterprint.png'; 
+    // //水印图片路径
+    // $waterprint->transparent = 45; 
+    // //水印透明度 
+    // $waterprint->pos = 10;  
     //设置水印的位置
     /*
     1: //上左 2: //上中 3: //上右 4: //中左 
     5: //中中 6: //中右 7: //下左 8: //下中 
     其余的数字都是下右
     */
-    $waterprint->output(); 
+    // $waterprint->output(); 
     // //输出水印图片文件覆盖到输入的图片文件 
     //======水印类实例结束======
 
-    exit("http://localhost/CqnuTribune/chatRoom/backStage/images/".$up->getFileName());
+    exit("images/".$up->getFileName());
     //获取上传后文件名子可以存进数据库
     // 然后返回给Edit
     } else {

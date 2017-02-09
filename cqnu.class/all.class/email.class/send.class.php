@@ -109,7 +109,7 @@ class EmailLog{
 	// 定义打开文件句柄
 	protected static $ins = null;
 	// 保存对象
-	protected static $path = 'E:\WebRoot\CqnuTribune\cqnu.class\all.class\mysql.class\sql.log';
+	protected static $path = 'sql.log';
 	// 定义日志文件路径
 	public function create_singleton(){
 	if(self::$ins == null){

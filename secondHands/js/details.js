@@ -34,7 +34,7 @@ $(function(){
         // POST提交
         dataType:'json',
         // 接受返回值类型
-        url:'http://localhost/CqnuTribune/secondHands/publishSecondGoods/backStage/message.php',
+        url:'../publishSecondGoods/backStage/message.php',
         // PHP接收地址
         data:{content: editor.$txt.html(),item_number: $('#item_number').text()},
         // 传过去的数据 当前留言内容，当前商品编号
@@ -67,4 +67,19 @@ function login(){
 layer.msg('请先登录后再试~');
 var s = document.getElementById('example');
 s.click();
+}
+function user(){
+layui.use('layer', function(){
+layer.config({extend:'../../../../styles/moon/style.css'});
+// 引用表情
+layer.config({
+
+    skin:'layer-ext-moon',
+
+    extend:'../../../../styles/moon/style.css'
+
+});
+layer.alert('不能自己私信自己~');
+});
+// 引用表情
 }

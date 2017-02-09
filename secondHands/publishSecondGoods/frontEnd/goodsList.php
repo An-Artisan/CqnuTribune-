@@ -8,6 +8,7 @@
     <script type="text/javascript" src="../../../styles/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../../js/ch-ui.admin.js"></script>
     <script type="text/javascript" src="../../../styles/layui/layui.js"></script>
+    <script src="../../../styles/js/loading.js"></script>
     <script type="text/javascript" src="js/goodsList.js"></script>
 </head>
 <body>
@@ -29,7 +30,7 @@
                             // 开启SESSION
                             $user = $_SESSION['user'];
                             // 获取当前用户
-                            $show_data= 4;
+                            $show_data= 1;
                             //一页显示多少记录
                             $select = Select::create_singleton();
                             //实例化查询对象
@@ -97,7 +98,7 @@
                          ?>
                         </td>
                         <td>
-                        <a  href="http://localhost/CqnuTribune/secondHands/index/details.php?item_number=<?php echo $data->item_number ?>" target='_blank' >商品详情</a>
+                        <a  href="../../index/details.php?item_number=<?php echo $data->item_number ?>" target='_blank' >商品详情</a>
                         <a onclick="ask(this);" name="<?php echo $data->item_number ?>"  >交易成功</a>
                         <a onclick="ask(this);" name="<?php echo $data->item_number ?>"  >删除商品</a>
                         </td>

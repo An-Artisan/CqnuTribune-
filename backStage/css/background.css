@@ -1,0 +1,574 @@
+/**
+* ================================================
+* @Author: 杨凤玲
+* @Date: 2016-10-30
+* @Content: 后台管理系统样式
+* @Last Modified time: 2016-11-14
+* ================================================
+*/
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    font-family: Microsoft Yahei;
+}
+/* 重置滚动条样式 */
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+/* info.html css */
+#info .content h3 {
+    margin: 15px;
+    font: 15px Microsoft Yahei;
+}
+#info .content li {
+    border-bottom: 1px dotted #eee;
+    height: 40px;
+}
+#info .content label {
+    display: inline-block;
+    font: 15px/40px Microsoft Yahei;
+    color: #909090;
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+    margin-right: 15px;
+}
+
+/* index.html nav css */
+.nav {
+    padding: 0;
+    margin: 0;
+    background-color: #2a323d;
+
+    position: relative;
+    /* height: 654px; */
+    height: auto;
+}
+nav .logo {
+    height: 200px;
+    background:#333d49 url(../img/cqnu.png) no-repeat scroll 27px 33px;
+    background-size: 80px;
+}
+nav .logo h1 {
+    font: 20px/45px Microsoft Yahei;
+    line-height: 45px;
+    color: #34d4d4;
+    text-align: center;
+    display: inline-block;
+
+    position: relative;
+    left: 40%;
+    top: 48px;
+
+}
+nav h2 {
+    font-size: 17px;
+    display: inline-block;
+    color: #c2ccd6;
+    cursor: pointer;
+}
+nav .txt .ul-fa span {
+    color: #c2ccd6;
+}
+nav .txt .ul-fa a {
+    color: #c2ccd6;
+    font-size: 17px;
+}
+nav .txt .ul-fa .li-fa {
+    width: 100%;
+    border-bottom: 1px solid #1e2430;
+}
+nav .txt .ul-fa .li-fa .list {
+    width: 100px;
+    padding: 18px 0;
+
+    position: relative;
+    left: 20%;
+}
+nav .txt .ul-son a {
+    color: #c2ccd6;
+    font-size: 15px;
+    display: inline-block;
+    margin: 3px 0;
+}
+nav .txt .ul-son a:hover {
+    color: #fff;
+}
+nav .txt .ul-son {
+    position: relative;
+    left: 25%;
+}
+nav .txt .ul-son li {
+    width: auto;
+    display: block;
+    width: auto;
+    margin: 5px 0;
+}
+
+nav .txt .ul-son li a:hover {
+    color: #fff;
+}
+
+nav .txt .ul-son li span:active {
+    color: #fff;
+}
+nav .status-bar {
+    width: 100%;
+    height: 134px;
+    background-color: #333d49;
+    margin: 90px 0;
+}
+nav .status-bar p {
+    color: #c2ccd6;
+    text-align: center;
+    padding: 40px 0 20px;
+}
+nav .status-bar button {
+    width: 35%;
+    display: block;
+    margin: 0 auto;
+    padding: 7px 0;
+    background-color: #9ad0d0;
+}
+nav .status-bar button:hover {
+    background-color: #aae6e6;
+}
+
+#section1 .content {
+    height: 654px;
+    padding: 0;
+}
+
+/* goods.html css */
+#goods table i {
+    color: #f00;
+}
+#goods .tab1 {
+    width: 100%;
+}
+#goods table tr th {
+    width: 20%;
+}
+#goods table tr th {
+    padding: 5px;
+}
+#goods table tr td {
+    padding: 5px;
+}
+#goods table .sm-input {
+    width: 60%;
+}
+#goods table .txt1 {
+    width: 60%;
+}
+/* goods-add.html css */
+#goods-add table i {
+    color: #f00;
+}
+#goods-add .tab1 {
+    width: 100%;
+}
+#goods-add table tr th {
+    width: 20%;
+}
+#goods-add table tr th {
+    padding: 5px;
+}
+#goods-add table tr td {
+    padding: 5px;
+}
+#goods-add table .sm-input {
+    width: 10%;
+}
+#goods-add table .md-input {
+    width: 50%;
+}
+#goods-add table .txt1 {
+    width: 60%;
+}
+#goods-add table tr td button {
+    margin: 0 10px;
+}
+/* goods-modify.html css */
+#goods-modify table i {
+    color: #f00;
+}
+#goods-modify .tab1 {
+    width: 100%;
+}
+#goods-modify table tr th {
+    width: 20%;
+}
+#goods-modify table tr th {
+    padding: 5px;
+}
+#goods-modify table tr td {
+    padding: 5px;
+}
+#goods-modify table .sm-input {
+    width: 10%;
+}
+#goods-modify table .md-input {
+    width: 50%;
+}
+#goods-modify table .txt1 {
+    width: 60%;
+}
+#goods-modify table tr td button {
+    margin: 0 10px;
+}
+/* address-add.html css */
+#address-add .tab1 {
+    width: 100%;
+}
+#address-add table tr th {
+    width: 20%;
+}
+#address-add table tr th {
+    padding: 5px;
+}
+#address-add table tr td {
+    padding: 5px;
+}
+#address-add table .sm-input {
+    width: 10%;
+}
+#address-add table .md-input {
+    width: 50%;
+}
+#address-add table .txt1 {
+    width: 60%;
+}
+#address-add table tr td button {
+    margin: 0 10px;
+}
+/* address-modify.html css */
+#address-modify .tab1 {
+    width: 100%;
+}
+#address-modify table tr th {
+    width: 20%;
+}
+#address-modify table tr th {
+    padding: 5px;
+}
+#address-modify table tr td {
+    padding: 5px;
+}
+#address-modify table .sm-input {
+    width: 10%;
+}
+#address-modify table .md-input {
+    width: 50%;
+}
+#address-modify table .txt1 {
+    width: 60%;
+}
+#address-modify table tr td button {
+    margin: 0 10px;
+}
+/* img.html css */
+#img .content input {
+    margin: 10px;
+}
+#img img {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* img-add.html css */
+#image-add .tab1 {
+    width: 100%;
+}
+#image-add table tr th {
+    width: 20%;
+}
+#image-add table tr th {
+    padding: 5px;
+}
+#image-add table tr td {
+    padding: 5px;
+}
+#image-add table .sm-input {
+    width: 10%;
+}
+#image-add table .md-input {
+    width: 50%;
+}
+#image-add table .txt1 {
+    width: 60%;
+}
+#image-add table tr td button {
+    margin: 0 10px;
+}
+/* image-modify.html css */
+#image-modify .tab1 {
+    width: 100%;
+}
+#image-modify table tr th {
+    width: 20%;
+}
+#image-modify table tr th {
+    padding: 5px;
+}
+#image-modify table tr td {
+    padding: 5px;
+}
+#image-modify table .sm-input {
+    width: 10%;
+}
+#image-modify table .md-input {
+    width: 50%;
+}
+#image-modify table .txt1 {
+    width: 60%;
+}
+#image-modify table tr td button {
+    margin: 0 10px;
+}
+#image-modify table img {
+    width: 80px;
+    height: auto;
+}
+
+/* links-add.html css */
+#links-add table tbody tr th i {
+    color: #f00;
+}
+#links-add table tbody tr td input {
+    width: 50%;
+}
+
+/* links-modify.html css */
+#links-modify table tbody tr th i {
+    color: #f00;
+}
+#links-modify table tbody tr td input {
+    width: 50%;
+}
+
+
+/* navs.html css */
+.nav-right .input1 {
+    width: 35px;
+}
+.nav-right .bread {
+    margin: 0;
+}
+.nav-right .title,
+.nav-right .operate {
+    padding: 15px 0;
+    height: 50px;
+    border-bottom: 1px solid #dedede;
+}
+.nav-right .operate a {
+    margin-right: 15px;
+}
+
+
+/* navs-add.html css */
+#navs-add table tbody tr td button {
+    margin: 0 15px;
+}
+#navs-add table i {
+    color: #f00;
+}
+#navs-add .tab1 {
+    width: 100%;
+}
+#navs-add table tr th {
+    width: 20%;
+}
+#navs-add table tr th {
+    padding: 5px;
+}
+#navs-add table tr td {
+    padding: 5px;
+}
+#navs-add table .sm-input {
+    width: 40%;
+}
+#navs-add table .xs-input {
+    width: 20%;
+}
+#navs-add table .txt1 {
+    width: 40%;
+}
+/* navs-modify.html css */
+#navs-modify table tbody tr td button {
+    margin: 0 15px;
+}
+#navs-modify table i {
+    color: #f00;
+}
+#navs-modify .tab1 {
+    width: 100%;
+}
+#navs-modify table tr th {
+    width: 20%;
+}
+#navs-modify table tr th {
+    padding: 5px;
+}
+#navs-modify table tr td {
+    padding: 5px;
+}
+#navs-modify table .sm-input {
+    width: 40%;
+}
+#navs-modify table .xs-input {
+    width: 20%;
+}
+#navs-modify table .txt1 {
+    width: 40%;
+}
+
+/* config-add.html css */
+#config-add table tr th i{
+    color: #f00;
+}
+#config-add table tr td input[type="text"] {
+    width: 30%;
+}
+
+#config-add table tr td input[type="radio"] {
+    margin: 0 10px;
+}
+#config-add table tr td button {
+    margin: 0 15px;
+}
+
+/* config-modify.html css */
+#config-modify table tr th i{
+    color: #f00;
+}
+#config-modify table tr td input[type="text"] {
+    width: 30%;
+}
+
+#config-modify table tr td input[type="radio"] {
+    margin: 0 10px;
+}
+#config-modify table tr td button {
+    margin: 0 15px;
+}
+
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    nav .logo {
+        height: 200px;
+        background:#333d49 url(../img/cqnu.png) no-repeat scroll 55px 20px;
+        background-size: 80px;
+    }
+    nav .logo h1 {
+        font-size: 18px;
+        position: relative;
+        top: 113px;
+        left: 30px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    body {
+        font-size: 14px;
+    }
+    nav .logo {
+    height: 200px;
+    background:#333d49 url(../img/cqnu.png) no-repeat scroll 40px 20px;
+    background-size: 70px;
+}
+    nav .logo h1 {
+        font-size: 14px;
+        position: relative;
+        top: 113px;
+        left: 20px;
+    }
+    nav h2 {
+        font-size: 14px;
+    }
+    #ul1 li a {
+        font-size: 14px;
+    }
+    nav .status-bar button {
+        font-size: 14px;
+        width: 60px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    body {
+        font-size: 12px;
+    }
+    #info .content h3 {
+        font-size: 12px;
+    }
+    #info .content label {
+        font-size: 12px;
+        width: 60px;
+        padding-right: 6px;
+        margin-right: 3px;
+    }
+    nav .logo {
+        height: 200px;
+        background:#333d49 url(../img/cqnu.png) no-repeat scroll 15px 25px;
+        background-size: 50px;
+   }
+    nav .logo h1 {
+        font-size: 12px;
+        position: relative;
+        top: 113px;
+        left: 0;
+    }
+    nav h2 {
+        font-size: 12px;
+    }
+    #ul1 li a {
+        font-size: 12px;
+    }
+    nav .status-bar button {
+        font-size: 12px;
+        width: 55px;
+    }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,230 @@
+/**
+* ================================================
+* @Author: 杨凤玲
+* @Date: 2016-11-26
+* @Content: 交友论坛-帖吧-内容
+* @Last Modified time: 2016-11-26
+* ================================================
+*/
+@charset "utf-8";
+/* CSS Document */
+#nav {
+    margin: 0;
+}
+
+/* #section1 css */
+#section1 {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    background: url(../img/bg1.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+#section1 .text {
+    width: 400px;
+    position: relative;
+    top: 40%;
+    left: 13%;
+    background-color: rgba(240, 240, 240, 0.4);
+    padding: 10px;
+}
+#section1 .text p {
+    text-align: left;
+    color: #fcfcfc;
+}
+#section1 .text p:nth-of-type(1) {
+    font: bold 33px Microsoft Yahei;
+}
+
+/* section2 css */
+#section2 {
+    margin-top: 50px;
+}
+#section2 .title {
+    margin: 0 auto;
+    padding: 10px 7px;
+    width: 90%;
+    background-color: #f6f7fb;
+}
+#section2 .title h3 {
+    text-align: left;
+}
+#section2 .name {
+    text-align: center;
+    margin: 5px auto;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+#section2 .owner {
+    text-align: center;
+    margin-top: 5px;
+}
+#section2 h2 {
+    padding-left: 20px;
+    font-size: 30px;
+    text-align: left;
+    color: #fa4d47;
+}
+#section2 .row .box {
+    border: 1px solid #efefef;
+}
+#section2 .col-md-4 h2 {
+    margin-bottom: 10px;
+}
+#section2 .row .school ol li {
+    text-overflow: ellipsis;
+}
+#section2 .row .school {}
+.container-fluid1 {
+    width: 90%;
+    margin: 10px auto;
+}
+.box {
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.box .head {
+    display: block;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    margin: 0 auto;
+}
+.box .content .main p .user {
+    color: #369;
+    margin-right: 10px;
+}
+.box .content .main .pic {
+    max-width: 200px;
+    margin: 10px 0;
+}
+.box .content .time {
+    color: #ccc;
+    font-size: 14px;
+    display: inline-block;
+}
+.box .content .praise {
+    background: url(../img/praise1-icon.png) no-repeat left center;
+    padding: 0 0 0 17px;
+}
+.box .content .main .info {
+    margin-top: 20px;
+}
+.box .content .main .info a {
+    float: right;
+}
+.box .content .main .info .comment-more {
+    margin-right: 10px;
+    padding-left: 20px;
+    background: url(../img/comment.png) no-repeat left center;
+}
+.box .content .main .praise-total {
+    background: url(../img/praise1-icon.png) no-repeat left center;
+    width: 100%;
+    background-color: #eee;
+    padding: 7px 20px;
+    margin-top: 10px;
+}
+.box .content .main .comment {
+    margin-top: 10px;
+}
+.box .content .main .comment .part {
+    border-top: 1px solid #eee;
+}
+.box .content .main .comment .part .head1 {
+    width: 40px;
+    height: 40px;
+}
+.box .content .main .comment .part .specific {
+    margin: 6px 0;
+}
+.box .content .main .comment .part .specific .info1 a {
+    float: right;
+    margin: 0 5px;
+}
+.box .content .text-box span {
+    float: right;
+    margin-top: 7px;
+}
+.box .content .text-box button {
+    float: right;
+    margin: 7px 0 0 12px;
+    outline: none;
+}
+.box .content .text-box .btn-off {
+    background-color: #ddd;
+    cursor: default;
+    color: #fff;
+    outline: none;
+    border-color: #ddd;
+}
+
+.box .content .text-box .form-control1 {
+    height: 30px;
+}
+.box .content .text-box .form-control-on {
+    height: 100px;
+}
+#section2 #div1 {
+    height: 200px;
+}
+#section2 button {
+    width: 70px;
+    display: block;
+    margin: 10px auto;
+    background-color: #fa4d47;
+    border: 1px solid #fa4d47;
+    color: #fff;
+}
+
+#section2 button:hover {
+    background-color: #EB504E;
+}
+#section2 .page ul {
+    float:left;
+    position:relative;
+    left:50%;
+}
+#section2 .page ul li {
+    float:left;
+    position:relative;
+    right:50%;
+}
+
+#section4 {
+    clear: left;
+}
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+
+}

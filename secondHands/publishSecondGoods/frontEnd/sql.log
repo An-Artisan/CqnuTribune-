@@ -1,0 +1,19 @@
+错误语句:select  c.item_number,c.comment_content,c.comment_time,c.comment_name from user.user_information as u left join (secondhand.goods as g left join  secondhand.goods_comment as c on g.item_number = c.item_number) on u.user_number=g.user_number where u.user_name=wangwu
+错误原因:Unknown column 'wangwu' in 'where clause'
+错误时间:2016-12-10 16:10:03
+错误语句:select  c.item_number,c.comment_content,c.comment_time,c.comment_name from user.user_information as u left join (secondhand.goods as g left join  secondhand.goods_comment as c on g.item_number = c.item_number) on u.user_number=g.user_number where u.user_name=wangwu
+错误原因:Unknown column 'wangwu' in 'where clause'
+错误时间:2016-12-10 16:11:03
+错误语句:select  c.item_number,c.comment_content,c.comment_time,c.comment_name from user.user_information as u left join (secondhand.goods as g left join  secondhand.goods_comment as c on g.item_number = c.item_number) on u.user_number=g.user_number where u.user_name=wangwu
+错误原因:Unknown column 'wangwu' in 'where clause'
+错误时间:2016-12-10 16:12:06
+错误语句:select g.title,c.comment_content,c.comment_time from secondhand.goods g left join secondhand.goods_comment c on g.item_number = c.item_number where c.comment_name 'lisi' order by comment_time desc limit 0, 1
+错误原因:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''lisi' order by comment_time desc limit 0, 1' at line 1
+错误时间:2016-12-27 20:40:02
+错误语句:select p_id,p_number,p_content,p_praise,p_time from makefriend.tree_publish where p.p_sender = 'liuqiang' order by p_time desc limit 0, 2
+错误原因:Unknown column 'p.p_sender' in 'where clause'
+错误时间:2017-01-01 17:20:14
+错误语句:select r_id,r_number,r_content,,r_sender,r_time from study_note.study_reply where r_sender = 'lisi' order by r_time desc limit 0, 2
+错误原因:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'r_sender,r_time from study_note.study_reply where r_sender = 'lisi' order by r_t' at line 1
+错误时间:2017-02-02 20:23:34
+

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../../styles/plugins/slide/css/drag.css">
     <script src="../../styles/plugins/slide/js/jquery-1.7.2.min.js"></script>
     <script src="../../styles/plugins/slide/js/drag.js"></script>
-
+    
     <script type="text/javascript" src="../plugins/Superslide/JS_nEW/jquery.SuperSlide.2.1.js"></script>
     
     <!-- 商品轮播 css -->
@@ -36,16 +36,21 @@
     <link rel="stylesheet" href="../css/secondHands.css">
     <!-- layer框架 -->
     <script type="text/javascript" src="../../styles/layui/layui.js"></script>
-
+    <script src="../../styles/js/loading.js"></script>
 </head>
 <body>
 <?php 
-  if(!isset($_GET['item_number'])){
+  session_start();
+  require '../../cqnu.class/all.class/all.class.php';
+    // 引用所有类
+  $select = Select::create_singleton();
+    // 获取查询对象
+  if(!isset($_GET['item_number'])||!isset($_SESSION['user'])){
       echo "<script>layui.use('layer', function(){layer.config({extend:'../../styles/moon/style.css'}); layer.config({    skin:'layer-ext-moon',    extend:'../../styles/moon/style.css'});   layer.confirm('请先登录后再试~', {
             btn: ['确定'], //按钮
             icon: 5
             }, function(){
-            window.location.href='http://localhost/CqnuTribune/secondHands/index/secondHands.php';
+            window.location.href='secondHands.php';
             });  });</script>";
       exit();
       // 如果用户直接赋值的链接进来，表示没有传item_number值，就提示用户登陆后在试试
@@ -53,7 +58,8 @@
  ?>
     
 <div id="item_number" style="display:none;" ><?php echo $_GET['item_number']; ?></div>
-    <nav class="navbar navbar-default" role="navigation">
+    
+     <nav id="nav" class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -62,20 +68,157 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="#">HelloWorld</a>
             </div>
-
+            
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">首页</a></li>
-                    <li class="active"><a href="#">二手市场</a></li>
-                    <li><a href="#">失物招领</a></li>
-                    <li><a href="#">交友论坛</a></li>
-                    <li><a href="#">我的私信</a></li>
-                    <li><a href="http://localhost/CqnuTribune/secondHands/publishSecondGoods/frontEnd/index.php?iframe=pass.html" target="_blank">个人中心</a></li>
+                <ul id="ul1" class="nav navbar-nav">
+                    <?php 
+                        $select = Select::create_singleton();
+                        // 获取查询对象
+                        $sql = "select * from manager.navigation order by navigation_sort";
+                        // 查询所有的导航信息
+                        $result = $select->select($sql);
+                        // 获取结果集
+                        while ($data = mysqli_fetch_object($result)) {
+                            if($data->navigation_alias == 'messageCenter'){
+                     ?>
+                     <li class="dropdown message">
+                        <?php 
+                            if(!isset($_SESSION['user'])){
+                        ?>
+                        <a href="<?php echo $data->navigation_url;?>" class="dropdown-toggle" data-toggle="dropdown" target="_blank" ><?php echo $data->navigation_name;?><span class="caret"></span><span class="badge badge1">0</span></a>
+                        <div class="dropdown-menu dropdown-menu1" role="menu">
+                       
+                        <div class="more">
+                            <p><a href="../../chatRoom/frontEnd/chatRoom.php" target="_blank">&lt;&lt;我的私信</a></p>
+                            <p><a href="../../secondHands/publishSecondGoods/frontEnd/index.php?iframe=information.php" target="_blank">查看全部消息&gt;&gt;</a></p>
+                        </div>
+                           
+                        </div>
+                        <?php 
+                            }else{
+                            $arr_push = 0;
+                            // 设置初始私信数
+                            $redis = new Redis();    
+                            //实例化Redis数据库
+                            $redis->pconnect("localhost","6379");  
+                            //长连接redis(这里的长连接是缓存服务器redis长连接不是ajax长连接)
+                            $redis->select(1);
+                            // 选择1号数据库
+                            $sender = $_SESSION['user'];
+                            // 获取当前用户
+                            $sql = 'select  user_name from user.user_information where user_name != "'.$sender.'"';
+                            // 查询所有用户，不包括当前登陆用户
+                            $select = Select::create_singleton();
+                            // 获得对象
+                            $result = $select->select($sql);
+                            // 获得结果集
+                             for ($i=0; $row = mysqli_fetch_object($result); $i++) { 
+                                    // $redis->set($i,$row->user_name);
+                                    // 设置用户到缓存
+                                    if( $redis->exists($row->user_name.'to'.$sender) ){
+                                    $arr_push ++;
+                                    // 获取私信的数目 
+
+                                    }
+
+                            }
+                            $count = $arr_push;
+                            // 获取私信总数
+                            $select = Select::create_singleton();
+                            // 获取查询对象
+                            $sql_second_count = "select  count(*) as c from user.user_information as u left join (secondhand.goods as g left join  secondhand.goods_comment as c on g.item_number = c.item_number) on u.user_number=g.user_number where u.user_name='".$_SESSION['user']."' and c.comment_isread = 0";
+                            $count += $select->page_count($sql_second_count);
+                            // 获取有多少条未读二手市场消息
+                            $sql_second = "select  c.item_number,c.comment_content,c.comment_time,c.comment_name from user.user_information as u left join (secondhand.goods as g left join  secondhand.goods_comment as c on g.item_number = c.item_number) on u.user_number=g.user_number where u.user_name='".$_SESSION['user']."' and c.comment_isread = 0";
+                            // 查看当前用户的商品留言信息
+                            $result_second = $select->select($sql_second);
+                            // 获取二手市场未读消息的结果集
+                            $sql_treehole_publish_content_count = "select count(*) as c from makefriend.tree_publish p LEFT JOIN makefriend.treehole t ON t.h_id = p.p_number  where t.h_name = '".$_SESSION['user']."' and p.p_content_is_read = 0 and p.p_getter = ''";
+                            $count += $select->page_count($sql_treehole_publish_content_count);
+                            // 获取有多少条发布的树洞回复数量(这里不包括里面互相回复的数量)
+                            $sql_treehole_publish_content = "select p.p_sender,p.p_content,p.p_number from makefriend.tree_publish p LEFT JOIN makefriend.treehole t ON t.h_id = p.p_number  where t.h_name = '".$_SESSION['user']."' and p.p_content_is_read = 0 and p.p_getter = ''";
+                            $result_treehole_publish_content = $select->select($sql_treehole_publish_content);
+                            // 获取发布树洞的结果集
+                            $sql_treehole_each_publish_count = "select count(*) as c from makefriend.tree_publish p LEFT JOIN makefriend.treehole t ON t.h_id = p.p_number  where p.p_content_is_read = 0 and p.p_getter =  '".$_SESSION['user']."'";
+                            $count += $select->page_count($sql_treehole_each_publish_count);
+                            // 获取在其他帖子回复我的数量
+                            $sql_treehole_each_publish = "select p.p_sender,p.p_content,p.p_number from makefriend.tree_publish p LEFT JOIN makefriend.treehole t ON t.h_id = p.p_number  where p.p_content_is_read = 0 and p.p_getter = '".$_SESSION['user']."'";
+                            $result_treehole_each_publish = $select->select($sql_treehole_each_publish);
+                            // 获取在其他帖子回复我的结果集
+                            $result_study_note_reply_count = "select count(*) as c from study_note.study_publish p LEFT JOIN study_note.study_reply r ON p.s_id = r.r_number  where r.r_content_is_read = 0 and p.s_name = '" . $_SESSION['user'] ."'";
+                            $count += $select->page_count($result_study_note_reply_count);
+                            // 获取回复学霸笔记的总数
+                            $sql_result_study_note_reply = "select s_id,s_title,r_sender from study_note.study_publish p LEFT JOIN study_note.study_reply r ON p.s_id = r.r_number  where r.r_content_is_read = 0 and p.s_name = '" . $_SESSION['user'] ."'";
+                            $result_study_note_reply = $select->select($sql_result_study_note_reply);
+                            // 获取在学霸笔记回复我的结果集
+                            
+                        ?>
+                         <a href="<?php echo $data->navigation_url;?>" class="dropdown-toggle" data-toggle="dropdown" target="_blank" ><?php echo $data->navigation_name;?><span class="caret"></span><span class="badge badge1"><?php echo $count;?></span></a>
+                         <div class="dropdown-menu dropdown-menu1" role="menu">
+                         <div class="more">
+                                <p><a href="../../chatRoom/frontEnd/chatRoom.php" target="_blank">&lt;&lt;我的私信</a></p>
+                                <p><a href="../../secondHands/publishSecondGoods/frontEnd/index.php?iframe=information.php" target="_blank">查看全部消息&gt;&gt;</a></p>
+                         </div>
+                            <?php 
+                                if($arr_push){
+                            ?>
+                           <div class="main">
+                                <a href="../../chatRoom/frontEnd/chatRoom.php" target="_blank" >有你的<?php echo $arr_push;?>条私信</a>
+                            </div> 
+                            <?php }?>
+                            <?php 
+                                while(($data_study_note = mysqli_fetch_object($result_study_note_reply)) && $data_study_note->s_title){
+                            ?>
+                            <div class="main">
+                                <a href=""><?php echo $data_study_note->r_sender;?></a><a href="../../mySchool/frontEnd/details.php?number=<?php echo $data_study_note->s_id; ?>" target="_blank" >在你的主题<?php echo $data_study_note->s_title;?>回复了你的信息</a>
+                            </div>
+                            <?php }?>
+                            <!-- 学霸笔记的未读消息-->                         
+                            <?php 
+                                while(($data_second = mysqli_fetch_object($result_second)) && $data_second->comment_content){
+                            ?>
+                            <div class="main">
+                                <a href=""><?php echo $data_second->comment_name;?></a><a href="../../secondHands/index/details.php?item_number=<?php echo $data_second->item_number; ?>" target="_blank" >在二手市场给你有留言</a>
+                            </div>
+                            <?php }?>
+                            <!-- 二手市场的未读消息-->
+                            <?php 
+                                while(($data_treehole_publish_content = mysqli_fetch_object($result_treehole_publish_content)) && $data_treehole_publish_content->p_sender){
+                            ?>
+                            <div class="main">
+                                <a href=""><?php echo $data_treehole_publish_content->p_sender;?></a>在树洞回复你<a href="../../makeFriends/frontEnd/treeHole.php?p_number=<?php echo $data_treehole_publish_content->p_number; ?>" target="_blank" ><?php echo $data_treehole_publish_content->p_content; ?></a>
+                            </div>
+                            <?php }?>
+                            <!-- 回复树洞的未读消息-->
+                            <?php 
+                                while(($data_treehole_each_publish = mysqli_fetch_object($result_treehole_each_publish)) && $data_treehole_each_publish->p_sender){
+                            ?>
+                            <div class="main">
+                                <a href=""><?php echo $data_treehole_each_publish->p_sender;?></a>在树洞回复你<a href="../../makeFriends/frontEnd/treeHole.php?p_number=<?php echo $data_treehole_each_publish->p_number; ?>" target="_blank" ><?php echo $data_treehole_each_publish->p_content; ?></a>
+                            </div>
+                            <?php }?>
+                            <!-- 树洞里互相回复的未读消息-->
+                            </div>
+                        <?php }?>
+                    </li>
+                    <?php }else{?>
+                    <li><a href="<?php echo $data->navigation_url;?>" target="_blank"><?php echo $data->navigation_name;?></a></li>
+                    <?php }}?>
+                   
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <?php if(!isset($_SESSION['user'])){ ?>
                     <li><a href="#" id="example">登录</a></li>
+                    <?php }else{  
+                        $sql_user_photo = "select user_photo from user.user_information where user_name = '" . $_SESSION['user'] . "'";
+                        // 查询所有的导航信息
+                        $u_photo = $select->select($sql_user_photo);
+                    ?>
+                    <span style="display:none;" id="u_photo"><?php echo mysqli_fetch_object($u_photo)->user_photo; ?></span>
+                    <li><a id="user"><?php echo $_SESSION['user']; ?></a></li>
+                    <?php  } ?>
                     <div id="LoginBox">
                         <div class="row1">
                             登录窗口
@@ -91,7 +234,7 @@
                         <div class="row-login">
                             密码:
                             <span class="inputBox">
-                                <input type="text" id="txtPwd" placeholder="密码" />
+                                <input type="password" id="txtPwd" placeholder="密码" />
                             </span>
                             <a href="javascript:void(0)" title="提示" class="warning" id="warn2">*</a>
                         </div>
@@ -102,21 +245,44 @@
                         </script>
                         <div align="center">
                             <form>
-                                <button herf="#" type="button" class="btn btn-primary" disabled="disabled" id="loginbtn">登录</button>
+                                <button herf="#"  type="button" class="btn btn-primary" disabled="disabled" id="loginbtn">登录</button>
                             </form>
                         </div>
                     </div>
-                    <li><a href="#">注册</a></li>
+                    <li><a href="../../register/register.html" target="_blank">注册</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
     <!--     nav over -->
+
     <?php 
-    require '../../cqnu.class/all.class/all.class.php';
     $item_number = $_GET['item_number'];
+    // 获取商品编号
+    if(!is_numeric($item_number)){
+        echo "<script>layui.use('layer', function(){layer.config({extend:'../../styles/moon/style.css'}); layer.config({    skin:'layer-ext-moon',    extend:'../../styles/moon/style.css'});   layer.confirm('请遵守网络安全法！', {
+            btn: ['确定'], //按钮
+            icon: 5
+            }, function(){
+            window.location.href='secondHands.php';
+            });  });</script>";
+        exit();
+    }
+    // 防sql注入
+
     $select = Select::create_singleton(); 
     // 获得查询对象
+    $sql = "select count(*) as c from secondhand.goods where item_number = " . $item_number;
+    if(!$select->page_count($sql)){
+        echo "<script>layui.use('layer', function(){layer.config({extend:'../../styles/moon/style.css'}); layer.config({    skin:'layer-ext-moon',    extend:'../../styles/moon/style.css'});   layer.confirm('该商品不存在！', {
+            btn: ['确定'], //按钮
+            icon: 5
+            }, function(){
+            window.location.href='secondHands.php';
+            });  });</script>";
+        exit();
+    }
+    // 防止用户篡改$_GET 信息
     $sql = "update secondhand.goods set click_rate = click_rate+1 where item_number = $item_number ";
     $select->query($sql);
     // 添加点击率
@@ -144,11 +310,10 @@
                                    for ($i = 0; $i < $length; $i++) {
                                     // 循环图片
                                  ?>
-                                <li><a><img src="http://localhost/CqnuTribune/secondHands/publishSecondGoods/goodsImg/images/<?php echo $arr[$i] ?> "/></a></li>
+                                <li><a><img src="../publishSecondGoods/goodsImg/images/<?php echo $arr[$i] ?> "/></a></li>
                                 <?php } 
                                 // 输出图片到界面上，结束循环
                                 ?>
-                               
                             </ul>
                              <a class="prev" href="javascript:void(0)"></a>
                             <a class="next" href="javascript:void(0)"></a>
@@ -200,7 +365,20 @@
                                 <!-- 是否小刀 -->
                                 <td> <?php echo $data->shelves ?> </td>
                                 <!-- 是否下架 -->
-                                <td> <?php echo $data->user_name ?> </td>
+                                <td> 
+                                <?php 
+                                    echo $data->user_name;
+                                    if($data->user_name == $_SESSION['user']){
+                                        $update = Update::create_singleton();
+                                        // 实例化更新对象
+                                        $arrayName = array('comment_isread' => 1);
+                                        // 标记留言为已读
+                                        $update->update('secondhand.goods_comment',$arrayName,'item_number','=',$item_number);
+                                        // 更新数据
+                                    }
+
+                                ?> 
+                                </td>
                                 <!-- 发布用户 -->
                                 <td> <?php echo $data->start_time; ?> </td>
                                 <!-- 发布时间 -->
@@ -237,7 +415,7 @@
                         <button type="button" class="active btn btn-warning col-xs-5 col-sm-4 col-md-4"><?php echo $data->shelves ?></button>
                         <div class="col-xs-2 col-sm-4 col-md-4">
                         </div>
-                        <button type="button" class="btn btn-info col-xs-5 col-sm-4 col-md-4">私信卖家</button>
+                        <a type="button" href="../../chatRoom/frontEnd/chatRoom.php?user=<?php echo $data->user_name ?>" class="btn btn-info col-xs-5 col-sm-4 col-md-4" target='_blank' >私信卖家</a>
                     </div>
                 </div>
 
@@ -253,7 +431,7 @@
                         //查询详情的结果集
                         while($data = mysqli_fetch_object($result)){
                          ?>
-                        <li><a href="http://localhost/CqnuTribune/secondHands/index/details.php?item_number=<?php echo $data->item_number ?>"> <?php echo $data->title ?> </a></li>
+                        <li><a href="details.php?item_number=<?php echo $data->item_number ?>"> <?php echo $data->title ?> </a></li>
                        <?php } ?>
                     </ol>
                     <!-- 点击率最高的五个商品 -->
@@ -264,6 +442,10 @@
 <!--     goods over -->
     
     <section id="content" class="container-fluid content">
+      <div class="row prompt">
+            <p>商品评价</p>
+            <div class="rightarrow"></div>
+        </div>
     <?php 
                     $show_data= 4;
                     //一页显示多少记录
@@ -282,9 +464,9 @@
      ?>
         <div class="row">
             <div class="col-xs-3">
-                    <img class="img-responsive" src="http://localhost/CqnuTribune/register/img/<?php echo $data->user_photo; ?>"/>
+                    <img class="img-responsive" src="../../register/img/<?php echo $data->user_photo; ?>"/>
                     <button class="btn button-default">
-                        <a href="#">私信</a>
+                        <a href="../../chatRoom/frontEnd/chatRoom.php?user=<?php echo $data->comment_name; ?>" target="_blank" >私信</a>
                     </button>
                     <p><a href="#">用户名：<?php echo $data->comment_name; ?> </a></p>
                 </div>
@@ -310,9 +492,7 @@
                         //输入分页 
                          }
                         else{
-                            echo "<div align='center'>
-                            当前商品没有任何评论，快来第一个评论吧~~
-                            </div>";
+                            echo '  <div class="row message"><div class="no-content"><p>当前商品没有任何评论，快来第一个评论吧~~</p></div></div>';
                             // 没有数据就给用户提醒
                         }
                     ?>
@@ -331,6 +511,64 @@
     </section>
     <!--     content over -->
 
+    <?php 
+        $select = Select::create_singleton();
+        // 获取查询对象
+        $sql = "select * from manager.configuration";
+        // 获取网站配置信息
+        $result = $select->select($sql);
+        // 获取查询结果集
+        $data = mysqli_fetch_object($result);
+     ?>
+    <section id="section4">
+        <div class="title">
+            <p>联系我们</p>
+            <p>如有问题请联系我们，我们24小时竭诚为您服务</p>
+        </div>
+        <div class="contact hidden-xs">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="box">
+                        <img src="../../styles/img/tel.jpg" height="60" width="60" alt="contact" />
+                        <div class="text">
+                            <p>客服电话：</p>
+                            <p><?php echo $data->service_hotline; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="box">
+                        <img src="../../styles/img/QQ.jpg" height="60" width="60" alt="contact" />
+                        <div class="text">
+                            <p>在线QQ客服：</p>
+                            <p><?php echo $data->service_qq; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="box">
+                        <img src="../../styles/img/wechat.jpg" height="60" width="60" alt="contact" />
+                        <div class="text">
+                            <p>关注官方微信：</p>
+                            <p><?php echo $data->service_wechat; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="box">
+                        <img src="../../styles/img/weibo.jpg" height="60" width="60" alt="contact" />
+                        <div class="text">
+                            <p>新浪微博：</p>
+                            <p><?php echo $data->service_weibo; ?></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- section4 over  -->
+
     <footer>
         <div class="aboutme">
             <p>
@@ -340,11 +578,13 @@
             </p>
         </div>
         <div class="copy">
-            <p>Copyright © 2016 重庆师范大学&nbsp;&nbsp;计算机与信息科学学院 梦创空间版权所有&copy;</p>
+            <p><?php echo $data->copy_right; ?></p>
         </div>
     </footer>
+    <!-- 百度统计代码 -->
+    <?php  echo $data->baidu_statistics;  ?>
 
-
+    
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="../../styles/js/jquery-3.1.1.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
@@ -359,6 +599,7 @@
     <script type="text/javascript" src="../../styles/Editor/dist/js/wangEditor.js"></script>
     <script type="text/javascript" src="../js/userDefined.js"></script>
     <script type="text/javascript" src="../js/details.js"></script>
+    <script type="text/javascript" src="../../styles/js/setting.js"></script>
 
 </body>
 </html>

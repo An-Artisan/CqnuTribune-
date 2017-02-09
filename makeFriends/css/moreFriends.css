@@ -1,0 +1,296 @@
+/**
+* ================================================
+* @Author: 杨凤玲
+* @Date: 2016-11-20
+* @Content: 交友论坛-更多朋友界面css
+* @Last Modified time: 2016-11-20
+* ================================================
+*/
+@charset "utf-8";
+/* CSS Document */
+* {
+    font-family: Microsoft Yahei;
+}
+.left {
+    float: left;
+}
+.rigth {
+    float: right;
+}
+#nav {
+    margin-bottom: 0;
+}
+/* #section1 css */
+#section1 {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    background: url(../img/bg1.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+#section1 .text {
+    width: 400px;
+    position: relative;
+    top: 40%;
+    left: 13%;
+    background-color: rgba(240, 240, 240, 0.4);
+    padding: 10px;
+}
+#section1 .text p {
+    text-align: left;
+    color: #fcfcfc;
+}
+#section1 .text p:nth-of-type(1) {
+    font: bold 33px Microsoft Yahei;
+}
+
+
+/* section2 css */
+#section2 {
+    background-color: #FFF6F6;
+}
+#section2 .search{
+    background-color: #fa4d47;
+}
+#section2 .search {
+    padding: 15px 0;
+}
+#section2 .search .wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+#section2 .search .wrapper .part {
+    display: inline-block;
+    color: #fff;
+    margin-right: 40px;
+}
+#section2 .search .wrapper .part1 {
+    width: 138px;
+}
+#section2 .search select {
+    color: #fff;
+    background-color: rgba(250, 77, 71, 0.3);
+    border: none;
+}
+#section2 .search .part2 {
+    width: 180px;
+}
+#section2 .search .part2 input {
+    width: 45px;
+    height: 25px;
+    display: inline-block;
+}
+#section2 .search button {
+    background-color: #FF7671;
+    border: none;
+    color: #fff;
+    float: right;
+}
+#section2 .search button:hover {
+    background-color: #FFACA9;
+}
+#section2 .search-result {
+    background-color: #FFFDF9;
+    width: 85%;
+    padding: 0 25px;
+    margin: 20px auto;
+}
+#section2 .search-result .one {
+    position: relative;
+    margin: 15px 0;
+}
+#section2 .search-result .one > img {
+    width: 146px;
+    height: 146px;
+}
+#section2 .search-result .one > p {
+    width: 146px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(120, 120, 120, 0.4);
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    position: absolute;
+    top: 117px;
+    left: 15px;
+}
+#section2 .search-result .one span {
+    float: right;
+    cursor: pointer;
+    color: #D8D8D8;
+}
+#section2 .search-result .one .info img {
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+#section2 .search-result .one .intro {
+    float: left;
+    margin: 2px 0;
+}
+#section2 .search-result ul {
+    display: block;
+    margin: 0 auto;
+}
+#section2 .search-result .page {
+    width: 250px;
+    margin: 10px auto;
+}
+#section2 .pagination {
+    width: 250px;
+    margin: 0 auto;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    #section2 .search-result .one > img {
+        width: 110px;
+        height: 110px;
+    }
+    #section2 .search-result .one > p {
+        width: 110px;
+        height: 30px;
+        line-height: 30px;
+
+        position: absolute;
+        top: 80px;
+    }
+    #section2 .search-result .one .intro p {
+        font-size: 12px;
+    }
+    #section2 .search-result .one .info img {
+        width: 32px;
+        height: 32px;
+    }
+    #section2 .search .wrapper .part {
+        margin-right: 20px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #section2 .search-result .one > img {
+        width: 100px;
+        height: 100px;
+    }
+    #section2 .search-result .one > p {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+
+        position: absolute;
+        top: 70px;
+        left: 15px;
+    }
+    #section2 .search .wrapper .part {
+        margin-right: 13px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #section1 .text {
+        width: 200px;
+    }
+    #section1 .text p {
+        font-size: 14px;
+    }
+    #section1 .text p:nth-of-type(1) {
+        font: bold 18px Microsoft Yahei;
+    }
+    #section2 .search-result .one > img {
+        width: 100px;
+        height: 100px;
+    }
+    #section2 .search-result .one > p {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+
+        position: absolute;
+        top: 70px;
+        left: 15px;
+    }
+    #section2 .search .wrapper .part {
+        margin: 6px 6px 6px 0;
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    #section1 .text {
+        width: 200px;
+    }
+    #section1 .text p {
+        font-size: 14px;
+    }
+    #section1 .text p:nth-of-type(1) {
+        font: bold 18px Microsoft Yahei;
+    }
+    #section2 .search-result .one > img {
+        width: 60px;
+        height: 60px;
+    }
+    #section2 .search-result .one > p {
+        font-size: 12px;
+        width: 60px;
+        height: 20px;
+        line-height: 20px;
+
+        position: absolute;
+        top: 40px;
+        left: 15px;
+    }
+    #section2 .pagination {
+        width: 150px;
+        margin: 0 auto;
+    }
+    #section2 .pagination a {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 1px 3px;
+    }
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+    #section1 .text {
+        width: 200px;
+    }
+    #section1 .text p {
+        font-size: 14px;
+    }
+    #section1 .text p:nth-of-type(1) {
+        font: bold 18px Microsoft Yahei;
+    }
+    #section2 .search-result .one > img {
+        width: 60px;
+        height: 60px;
+    }
+    #section2 .search-result .one > p {
+        font-size: 12px;
+        width: 60px;
+        height: 20px;
+        line-height: 20px;
+
+        position: absolute;
+        top: 40px;
+        left: 15px;
+    }
+}

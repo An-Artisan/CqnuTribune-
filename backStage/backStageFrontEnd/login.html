@@ -1,0 +1,63 @@
+<!-- /**
+* ================================================
+* @Author: 杨凤玲
+* @Date: 2016-11-07
+* @Content: 后台管理系统-后台登录
+* @Last Modified time: 2016-11-08
+* ================================================
+*/ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>后台登录界面</title>
+    <link rel="stylesheet" href="../../styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/css/reset.css">
+    <script src="../../styles/js/loading.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <script type="text/javascript" src="../../styles/layui/layui.js"></script>
+    <script src="../../styles/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/administrator_pass_verify.js"></script>
+</head>
+<body>
+    <div id="login" class="login">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="logo">
+                    <h1>HelloWorld</h1>
+                </div>
+                <div class="main">
+                    <form role="form" method="post" name="login" >
+                        <div class="input1">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <input type="text"  id="administrator_name" class="" placeholder="Enter Username">
+                        </div>
+                        <div class="input1">
+                            <span class="glyphicon glyphicon-lock"></span>
+                            <input type="password" id="administrator_pass" class="" placeholder="Password">
+                        </div>
+                        <div class="input1">
+                            <input type="text" id="administrator_verify" class="verification" placeholder="请输入验证码">
+                            
+                            <img src="../backStageBackStage/verificationCode.php" onclick="this.src = '../backStageBackStage/verificationCode.php?' + Math.random()" >
+                            <!-- ?+Math.random() 处理浏览器兼容问题，有些浏览器地址一样的话不处理，所以加一个随机数-->
+                        </div>
+                    </form>
+                </div>
+                <button id="btn" type="submit" class="btn btn-default">Login</button>
+            </div>
+        </div>
+
+<!--         <div class="footer">
+            <p>Copyright © 2016 重庆师范大学&nbsp;&nbsp;计算机与信息科学学院 梦创空间版权所有&copy;</p>
+        </div> -->
+    </div>
+
+
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../../styles/js/jquery-3.1.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../../styles/js/bootstrap-3.3.0.min.js"></script>
+</body>
+</html>

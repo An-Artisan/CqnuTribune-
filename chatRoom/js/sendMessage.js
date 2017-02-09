@@ -26,11 +26,11 @@ if (e && e.keyCode == 13 && e.ctrlKey) { // 按 enter  e.ctrlKey代表ctrl
         editor.$txt.html('<p><br></p>');
         // 吧编辑器的内容清空
         // $("#content").append(edit+ '<br />' +  getNowFormatDate()  + '<br />');
-        $("#content").append('<div class="left"><img src="../img/head.jpg" height="40" width="40" alt="head portrait" class="img-circle" style="float:left;"><div class="leftsend"><p>'+edit+''+ getNowFormatDate() + '</p><div class="leftarrow"></div></div></div>');
+        $("#content").append('<div class="left"><img src="'+$("#head").attr("src")+'" height="40" width="40" alt="head portrait" class="img-circle" style="float:left;"><div class="leftsend"><p>'+edit+''+ getNowFormatDate() + '</p><div class="leftarrow"></div></div></div>');
         // 然后添加到聊天区(毕竟自己发给别人的记录也要显示)
         document.getElementById('content').scrollTop = document.getElementById('content').scrollHeight;
         //让浏览器的滚动条每次都到最底端
-        $.post("http://localhost/CqnuTribune/chatRoom/backStage/send_content.php",
+        $.post("../backStage/send_content.php",
         // 进行ajax POST请求，上面是接收请求PHP地址
             {
                 content: edit,

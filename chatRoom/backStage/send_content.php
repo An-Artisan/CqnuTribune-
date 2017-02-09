@@ -16,6 +16,7 @@
          还有一个作用就是做消息通知，因为里面只装一条消息，而且返回到ajax客户端的时候就已经
          把这个key删除了。所以只要这个即使消息记录存在就代表有未读的消息，在赋值给一个新的
          key，用来做推送使用
+      3.设置一个最新的list Key 用来显示前端的好友列表
     * @功能:     发送单条即时消息
     * @作者:     不敢为天下
     * @时间：    2016-10-12
@@ -40,6 +41,14 @@
         // 把发送人和接收人拼接成一个字符串作为key
        	$id = $key . '!@#$id';
         // 设置key为$id的字符串(用来记录消息的多少)
+        if(!$redis->exists($key.'list'))
+        {   
+           $redis->set($key.'list',$content);
+           // 设置最新的消息，用来做列表显示
+           $insert = Insert::create_singleton();
+           $arrayName = array('user_sender' => $sender, 'user_getter' => $getter);
+           $insert->insert('private_message.user_list',$arrayName); 
+        }
         if(!$redis->exists($id)){
             // 如果不存在这个key，代表没发送过消息
         	  $redis->set($id,1);

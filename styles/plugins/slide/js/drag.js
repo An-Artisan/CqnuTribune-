@@ -1,9 +1,3 @@
-/*
- * drag 1.0
- * create by tony@jentian.com
- * date 2015-08-18
- * 拖动滑块
- */
 (function($){
     $.fn.drag = function(options){
         var x, drag = this, isMove = false, defaults = {
@@ -54,7 +48,7 @@
             handler.unbind('mousedown');
             $(document).unbind('mousemove');
             $(document).unbind('mouseup');
-            $('#btn').removeAttr('disabled');
+            $('#loginbtn').removeAttr('disabled');
 
         }
     };

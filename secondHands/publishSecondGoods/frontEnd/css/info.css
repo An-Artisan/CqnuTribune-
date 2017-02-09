@@ -1,0 +1,20 @@
+/* infomation css */
+#info h3 {
+    font: bold 14px Sim Hei;
+    padding: 10px 0;
+    border-bottom: 1px solid #dedede;
+}
+#info .box {
+    font-size: 13px;
+    margin: 20px 0;
+}
+#info .box .time {
+    display: block;
+    border-bottom: 1px solid #dedede;
+}
+#info .box .content {
+    margin: 10px 0;
+}
+#info .box a {
+    color: #225599;
+}

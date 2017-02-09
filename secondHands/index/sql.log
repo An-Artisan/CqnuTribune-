@@ -1,0 +1,4 @@
+错误语句:select picture,title,description,item_number from  secondhand.goods  order by start_time desc limit -12, 12
+错误原因:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-12, 12' at line 1
+错误时间:2016-12-18 16:55:52
+

@@ -4,8 +4,12 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../../publishStyle/css/ch-ui.admin.css">
     <link rel="stylesheet" href="../../publishStyle/font/css/font-awesome.min.css">
-     <script type="text/javascript" src="../../publishStyle/js/jquery.js"></script>
+    <script type="text/javascript" src="../../publishStyle/js/jquery.js"></script>
+    <script type="text/javascript" src="../../../styles/layui/layui.js"></script>
+    <script src="js/updatePass.js"></script>  
     <script type="text/javascript" src="../../publishStyle/js/ch-ui.admin.js"></script>
+    <script src="../../../styles/js/loading.js"></script>
+  
 </head>
 <body>
     <!--面包屑导航 开始-->
@@ -24,26 +28,25 @@
 <!--结果集标题与导航组件 结束-->
 
 <div class="result_wrap">
-    <form method="post" onsubmit="return changePass()">
-        <input type="hidden" name="_token" value="X25wGVjFqDXvq7vAUAJTjTAHfX0RhkGufucRdzGh">
+    <form method="post" action="../backStage/updatePass.php" onsubmit="return changePass()">
         <table class="add_tab">
             <tbody>
             <tr>
                 <th width="120"><i class="require">*</i>原密码：</th>
                 <td>
-                    <input type="password" name="password_o"> </i>请输入原始密码</span>
+                    <input type="password" onblur="myFunction(this);" id="password_o" name="password_o"> </i>请输入原始密码</span>
                 </td>
             </tr>
             <tr>
                 <th><i class="require">*</i>新密码：</th>
                 <td>
-                    <input type="password" name="password"> </i>新密码6-20位</span>
+                    <input type="password" id="password" name="password"> </i>新密码6-20位</span>
                 </td>
             </tr>
             <tr>
                 <th><i class="require">*</i>确认密码：</th>
                 <td>
-                    <input type="password" name="password_c"> </i>再次输入密码</span>
+                    <input type="password" id="password_c" onblur="verify(this);" name="password_c"> </i>再次输入密码</span>
                 </td>
             </tr>
             <tr>

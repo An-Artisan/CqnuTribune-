@@ -1,0 +1,4 @@
+错误语句:select * from manger.announcement order by a_time
+错误原因:Table 'manger.announcement' doesn't exist
+错误时间:2017-02-08 16:40:23
+

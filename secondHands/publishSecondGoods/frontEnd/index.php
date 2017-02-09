@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+    <title>个人中心</title>
 	<link rel="stylesheet" href="../../css/ch-ui.admin.css">
 	<link rel="stylesheet" href="../../font/css/font-awesome.min.css">
 	<script type="text/javascript" src="../../../styles/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../../js/ch-ui.admin.js"></script>
-     <script type="text/javascript" src="../../../styles/layui/layui.js"></script>
+    <script type="text/javascript" src="../../../styles/layui/layui.js"></script>
+    <script src="../../../styles/js/loading.js"></script>
 </head>
 <body>
 <?php
@@ -16,7 +18,7 @@ if(!isset($_SESSION['user'])){
     btn: ['确定'], //按钮
     icon: 5
     }, function(){
-    window.location.href='http://localhost/CqnuTribune/secondHands/index/secondHands.php';
+    window.location.href='../../index/secondHands.php';
     });  });</script>";
 exit();
 // 如果用户直接赋值的链接进来，表示没有传item_number值，就提示用户登陆后在试试
@@ -47,8 +49,9 @@ exit();
 			<li>
             	<h3><i class="fa fa-fw fa-info-circle"></i>个人中心</h3>
                 <ul class="sub_menu">
-                    <li><a href="publishGoods.php" target="main"><i class="fa fa-fw fa-info"></i>个人资料</a></li>
-                    <li><a href="goodsList.php" target="main"><i class="fa fa-fw fa-pencil-square-o"></i>修改资料</a></li>
+                    <li><a href="personalData.php" target="main"><i class="fa fa-fw fa-info"></i>个人资料</a></li>
+                    <li><a href="update.php" target="main"><i class="fa fa-fw fa-pencil-square-o"></i>修改资料</a></li>
+                    <li><a href="information.php" target="main"><i class="fa fa-fw  fa-envelope-square"></i>通知中心</a></li>
                 </ul>
             </li>
 
@@ -57,16 +60,24 @@ exit();
                 <ul class="sub_menu">
                     <li><a href="publishGoods.php" target="main"><i class="fa fa-fw fa-plus-square"></i>发布商品</a></li>
                     <li><a href="goodsList.php" target="main"><i class="fa fa-fw fa-list-ul"></i>我的发布</a></li>
+                    <li><a href="secondMessage.php" target="main"><i class="fa fa-fw fa-comment"></i>我的留言</a></li>
                 </ul>
             </li>
             <li>
-            	<h3><i class="fa fa-fw fa-cog"></i>系统设置</h3>
+            	<h3><i class="fa fa-fw fa-mortar-board"></i>论坛管理</h3>
                 <ul class="sub_menu">
-                    <li><a href="info.html" target="main"><i class="fa fa-fw fa-cubes"></i>网站配置</a></li>
-                    <li><a href="#" target="main"><i class="fa fa-fw fa-database"></i>备份还原</a></li>
+                    <li><a href="cqnuerTreeHole.php" target="main"><i class="fa fa-fw fa-tree"></i>我的树洞</a></li>
+                    <li><a href="cqnuerTreeHolePublish.php" target="main"><i class="fa fa-fw fa-reply-all"></i>我的回复</a></li>
                 </ul>
             </li>
             <li>
+                <h3><i class="fa fa-fw fa-pencil"></i>学霸笔记</h3>
+                <ul class="sub_menu">
+                    <li><a href="cqnuerStudyNote.php" target="main"><i class="fa fa-fw  fa-pencil-square"></i>我的笔记</a></li>
+                    <li><a href="cqnuerStudyNotePublish.php" target="main"><i class="fa fa-fw fa-reply"></i>我的回复</a></li>
+                </ul>
+            </li>
+            <!-- <li>
             	<h3><i class="fa fa-fw fa-thumb-tack"></i>工具导航</h3>
                 <ul class="sub_menu">
                     <li><a href="http://www.yeahzan.com/fa/facss.html" target="main"><i class="fa fa-fw fa-font"></i>图标调用</a></li>
@@ -74,14 +85,14 @@ exit();
                     <li><a href="http://tool.c7sky.com/webcolor/" target="main"><i class="fa fa-fw fa-tachometer"></i>配色板</a></li>
                     <li><a href="element.html" target="main"><i class="fa fa-fw fa-tags"></i>其他组件</a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
 	</div>
 	<!--左侧导航 结束-->
 
 	<!--主体部分 开始-->
 	<div class="main_box">
-		<iframe src="<?php echo isset($_GET['iframe'])?$_GET['iframe']:'publishGoods.php'; ?>" frameborder="0" width="100%" height="100%" name="main"></iframe>
+		<iframe src="<?php echo isset($_GET['iframe'])?$_GET['iframe']:'personalData.php'; ?>" frameborder="0" width="100%" height="100%" name="main"></iframe>
 	</div>
 	<!--主体部分 结束-->
 

@@ -85,7 +85,7 @@
 		对方不能收到。所以这里不能删除)*/
 		$redis->close();
 		// 关闭reids连接，以免多人使用，导致并发ajax程序的reids资源消耗过多
-		$sql = "insert into  `private_message.webchat_message` (`content`,`sender`,`getter`,`time`) values ";
+		$sql = "insert into  private_message.webchat_message (`content`,`sender`,`getter`,`time`) values ";
 		/*
 		当当前用户选择一个好友时就要把缓存服务器里面的所有数据写进mysql数据库以免丢失
 		所以这里要拼接sql语句
@@ -102,7 +102,7 @@
 		for($i = 0;$i<$get_length;$i++){
 			 $arr = explode("&@part",$array[$i]);
 			 // 分割记录字符串成数组，因为发送消息的页面是用&@part拼接，前面是记录，后面是发送时间
-			 $content_sql =  "('".$arr[0]."',";
+			 $content_sql =  "('".addslashes($arr[0])."',";
 			 // 加上前小括号，单引号，逗号
 			 $time =  "'".$arr[1] ."'),";
 			 // 加上单引号，后括号，逗号
@@ -122,7 +122,7 @@
 		// 如果缓存服务器里面有对方用户发过来的消息就写入数据库
 		isset($send_content)?write_mysql($send_content,$sender_sql,$getter_sql,$sql):null;
 		// 如果缓存服务器里面有当前用户发过去的消息就写入数据库
-		$sql = "select `content`,`time`,`sender` from `private_message.webchat_message` where sender = '".$getter ."' and getter = '".$sender . "' or sender =  '".$sender."' and getter = '".$getter."' order by time asc";
+		$sql = "select `content`,`time`,`sender` from private_message.webchat_message where sender = '".$getter ."' and getter = '".$sender . "' or sender =  '".$sender."' and getter = '".$getter."' order by time asc";
 		/*
 		   查找数据库中sender(发送人)和getter(接收人)都是传过来的sender和getter 或者
 		   sender(发送人)和getter(接收人)都是传过来的getter和sender

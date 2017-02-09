@@ -1,0 +1,186 @@
+/**
+* ================================================
+* @Author: 杨凤玲
+* @Date: 2016-11-25
+* @Content: 交友论坛-帖吧
+* @Last Modified time: 2016-11-25
+* ================================================
+*/
+@charset "utf-8";
+/* CSS Document */
+#nav {
+    margin: 0;
+}
+
+/* #section1 css */
+#section1 {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    background: url(../img/bg1.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+#section1 .text {
+    width: 400px;
+    position: relative;
+    top: 40%;
+    left: 13%;
+    background-color: rgba(240, 240, 240, 0.4);
+    padding: 10px;
+}
+#section1 .text p {
+    text-align: left;
+    color: #fcfcfc;
+}
+#section1 .text p:nth-of-type(1) {
+    font: bold 33px Microsoft Yahei;
+}
+
+/* section2 css */
+#section2 nav {
+    margin: 10px 0;
+    padding: 0 10px;
+    width: 100%;
+    height: 35px;
+    background-color: #eceff2;
+}
+#section2 nav ul li {
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 10px;
+}
+#section2 .one {
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+#section2 .one .click p {
+    background: url(../img/spechbubble_white.png) no-repeat;
+    padding: 0 6px;
+}
+#section2 p {
+    height: 30px;
+    line-height: 30px;
+}
+#section2 .one .img img {
+    width: 180px;
+    height: auto;
+    display: inline-block;
+}
+#section2 .one .title,
+#section2 .one .content,
+#section2 .one .author,
+#section2 .one .comment > p {
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+#section2 .one .time {
+    float: right;
+}
+#section2 .row .one
+#section2 .publish input {
+    margin: 10px 0;
+    padding: 2px 5px;
+  
+    width: 100%;
+    border: 10px solid #dedede;
+    color: #dedede;
+}
+#section2 .publish h5 {
+    display: inline-block;
+    margin-top: 7px ;
+    font-weight: bold;
+    color: #000;
+}
+#section2 .publish button {
+    margin: 10px;
+}
+
+#section2 .title1{
+    border: 1px solid #dedede;
+    width: 100%;
+    height: 20px;
+    padding: 13px 0 13px 10px;
+    margin: 10px 0;
+}
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #section2 .one .img img {
+        width: 130px;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #section2 .one .img img {
+        width: 90px;
+    }
+    #section1 .text {
+        width: 200px;
+    }
+    #section1 .text p {
+        font-size: 14px;
+    }
+    #section1 .text p:nth-of-type(1) {
+        font: bold 18px Microsoft Yahei;
+    }
+    #section2 {
+        font-size: 12px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    #section2 .one .img img {
+        width: 50px;
+    }
+    #section1 .text {
+        width: 200px;
+    }
+    #section1 .text p {
+        font-size: 14px;
+    }
+    #section1 .text p:nth-of-type(1) {
+        font: bold 18px Microsoft Yahei;
+    }
+    #section2 nav ul {
+        padding: 0;
+        margin: 0;
+    }
+    #section2 nav ul li {
+        margin: 0 2px;
+    }
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+    #section2 .one .img img {
+        width: 40px;
+    }
+    #section1 .text {
+        width: 200px;
+    }
+    #section1 .text p {
+        font-size: 14px;
+    }
+    #section1 .text p:nth-of-type(1) {
+        font: bold 18px Microsoft Yahei;
+    }
+
+}

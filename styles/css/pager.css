@@ -1,0 +1,15 @@
+
+
+.Pagination {margin:10px 0 0;padding:5px 0;text-align:rightright; height:20px; line-height:20px; font-family:Arial, Helvetica, sans-serif,"宋体";}    
+
+.Pagination a {margin-left:2px;padding:2px 7px 2px;font-size:16px;}    
+
+.Pagination .dot{ border:medium none; padding:4px 8px}    
+
+.Pagination a:link, .Pagination a:visited {border:1px solid #dedede;color:#696969;text-decoration:none;}    
+
+.Pagination a:hover, .Pagination a:active, .Pagination a.current:link, .Pagination a.current:visited {border:1px solid #dedede;color:#fff; background-color:#ff6600; background-image:none; border:#ff6600 solid 1px;}    
+
+.Pagination .selectBar{ border:#dedede solid 1px; font-size:12px; width:95px; height:21px; line-height:21px; margin-left:10px; display:inline}    
+
+.Pagination a.tips{_padding:4px 7px 1px;}  

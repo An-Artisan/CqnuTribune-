@@ -116,8 +116,8 @@ class Insert{
 			foreach ($array as $key => $value) {
 					$field[] = $key;
 					// 获取字段存在一个数组
-					$field_value[] = $value;
-					// 获取值存在一个数组
+					$field_value[] = addslashes($value);
+					// 获取值存在一个数组,并且过滤不安全的字符串，防sql注入
 			}
 			
 			for ($i = 0; $i < count($field); $i ++) {
@@ -185,7 +185,7 @@ class Log{
 	// 定义打开文件句柄
 	protected static $ins = null;
 	// 保存对象
-	protected $path = 'E:\WebRoot\CqnuTribune\cqnu.class\all.class\mysql.class\sql.log';
+	protected $path = 'sql.log';
 	// 定义日志文件路径
 	public function create_singleton(){
 	if(self::$ins == null){
@@ -334,12 +334,15 @@ class Update{
 	// 禁止克隆对象
 	public function update($table,$array,$field,$operator,$value){
 		// 需要传入5个参数，表名，数组，字段，操作符，值
+
+			$value = "'".addslashes($value)."'";
+			// 给值加上分隔符,过滤不安全的字符串，防sql注入
 			$sql = "update $table set ";
 			// 拼接sql语句
 			foreach ($array as $k => $v) {
-				$sql .= $k . "=" . "'" . $v . "',";
+				$sql .= $k . "=" . "'" . addslashes($v) . "',";
 			}
-			// 拼接传过来的参数为一个sql语句
+			// 拼接传过来的参数为一个sql语句,过滤不安全的字符串，防sql注入
 			$sql = substr($sql, 0, -1);
 			// 删除最后一个逗号
 			$sql .= " where $field" . $operator . "$value";
@@ -424,9 +427,11 @@ class Select{
 	}
 
 	public function query($sql){
-		 mysqli_query($this->conn,$sql);
+		 if(mysqli_query($this->conn,$sql))
 		 // 执行查询语句
-		 return true;
+		 	return true;
+		 else
+		 	return false;
 	}
 	public function page_count($sql){
 				$row = mysqli_fetch_assoc(mysqli_query($this->conn,$sql));

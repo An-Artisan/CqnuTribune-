@@ -1,12 +1,11 @@
 /**
 * ================================================
-* title：reset.css
-* time: 2016-10-17
-* author: 杨凤玲
-* content: 重置样式
+* @Author: 杨凤玲
+* @Date: 2016-10-17
+* @Content: 重置样式
+* @Last Modified time: 2016-10-29
 * ================================================
 */
-
 @charset "utf-8";
 /* CSS Document */
 body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
@@ -15,7 +14,227 @@ li{list-style:none;}
 input,select,textarea{outline:none;}
 textarea{resize:none;}
 a{text-decoration:none;}
+a:hover{text-decoration: none;}
+a:link{text-decoration: none;}
 
 body {
     padding: 0;
+    margin: 0;
 }
+/* 轮播 */
+
+#myCarousel {
+    height: auto;
+}
+
+/* 导航公用样式 */
+/* nav css */
+#nav .active1 {
+    background-color: #E7E7E7;
+}
+#nav > ul > li {
+    height: 50px;
+}
+#nav .badge1 {
+    position: relative;
+    top: -15px;
+    left: -5px;
+}
+#ul1 li a {
+    outline: 0;
+}
+#nav .dropdown-menu1 {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+}
+#nav .dropdown-menu1 .main a {
+    color: #2A6496;
+}
+#nav .dropdown-menu1 .main {
+    padding: 0 5px;
+    height: 41px;
+    line-height: 41px;
+    border-bottom: 1px solid #dedede;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+#nav .dropdown-menu1 .more {
+    padding-bottom: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid #dedede;
+    position: relative;
+    top: 5px;
+    left: 0px;
+}
+#nav .dropdown-menu1 {
+    padding: 0 5px;
+}
+#nav .dropdown-menu1 .more p {
+    display: inline-block;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+}
+#nav .dropdown-menu1 .more p:nth-of-type(1) {
+    text-align: left;
+}
+#nav .dropdown-menu1 .more p:nth-of-type(2) {
+    text-align: right;
+    float: right;
+}
+/* section4 over */
+#section4 {
+    border-bottom: 1px solid #dedede;
+    padding: 40px 0 20px;
+    font-family: Microsoft Hei;
+}
+#section4 .contact {
+    border-bottom: 1px solid #efefef;
+}
+#section4 .title {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+}
+#section4 .title p {
+    margin: 10px 0;
+    text-align: center;
+}
+#section4 .title p:first-child {
+    font-size: 25px
+}
+#section4 .title p:last-child {
+    font-size: 15px;
+    color: #999;
+}
+#section4 .contact {
+    width: 90%;
+    margin: 0 auto;
+}
+#section4 .contact .box {
+    border: 1px solid #efefef;
+    margin: 30px;
+
+/*父元素 利用table垂直居中 */
+    display: table;
+    width: 90%;
+}
+#section4 .contact .box img {
+    display: inline-block;
+    position: relative;
+    left: 10px;
+}
+#section4 .contact .box .text {
+
+/* 在父元素的基础上利用table属性垂直居中div */
+    display: table-cell;
+    vertical-align: middle;
+}
+#section4 .contact .box .text p:first-child {
+    font-size: 16px;
+}
+#section4 .contact .box .text p:last-child {
+    font-size: 14px;
+    color: #dedede;
+}
+#section4 .links {
+    margin-top: 20px;
+}
+#section4 .links h4 {
+    margin: 10px;
+    font-weight: bold;
+}
+#section4 .links ul {
+    display: block;
+    clear: left;
+}
+#section4 .links ul li {
+    float: left;
+    margin: 0 10px;
+}
+#section4 .links ul li:nth-of-type(1) a {
+    color: #1b252e;
+}
+/* footer css */
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #1b252e;
+    padding: 30px;
+}
+footer p,
+footer a {
+    text-align: center;
+    color: #8b939d;
+}
+footer .aboutme {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    border-top: 1px solid #313a43;
+}
+footer .aboutme a:hover {
+    color: #d80808;
+    text-decoration: none;
+}
+
+
+
+/* xs手机屏幕 [768~992)px ） */
+@media (max-width: 768px) {
+    #section1 .container .title h1 {
+        font-size: 28px;
+    }
+    .show1 {
+        width: 80px;
+        height: 80px;
+    }
+    #content .row,
+    footer {
+    font-size: 14px;
+   }
+}
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens [992,1200) */
+@media only screen and (max-width : 1200px) {
+    footer {
+        font-size: 14px;
+   }
+
+}
+
+/* Medium Devices, Desktops [768,992) */
+@media only screen and (max-width : 992px) {
+    footer {
+        font-size: 14px;
+   }
+   #nav {
+        font-size: 13px;
+   }
+   #nav li a {
+    padding: 15px 10px;
+   }
+}
+
+/* Small Devices, Tablets [480,768) */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones [320,480) */
+@media only screen and (max-width : 480px) {
+}
+
+/* Custom, iPhone Retina [320,) */
+@media only screen and (max-width : 320px) {
+
+}
+

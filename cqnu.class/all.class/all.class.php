@@ -19,4 +19,6 @@
     // 引用根据IP定位位置类
     require 'thumb.class/thumb.class.php';
     // 引用缩略图剪裁类
+    require 'sendsitivewordfilter/SensitiveWordFilter.class.php';
+    // 引用敏感词汇过滤类
  ?>

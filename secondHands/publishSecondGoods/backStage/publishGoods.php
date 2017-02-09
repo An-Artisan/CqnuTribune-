@@ -9,22 +9,22 @@
 </body>
 </html>
 <?php 
-require '../../../cqnu.class/all.class/all.class.php';
-// 引用所有类
-session_start();
-// 开启session
-$username = $_SESSION['user'];
-// 获得当前用户名
-$img = '';
-$top_category = $_POST['top_category'];
-$title = $_POST['title'];
-$price = $_POST['price'];
-$prime_cost = $_POST['prime_cost'];
-$bargained = $_POST['bargained'];
-$address = $_POST['address'];
-$description = $_POST['description'];
-$time = date('Y-m-d H:i:s',time());
-// 获得ajax传过来的数据
+    require '../../../cqnu.class/all.class/all.class.php';
+    // 引用所有类
+    session_start();
+    // 开启session
+    $username = $_SESSION['user'];
+    // 获得当前用户名
+    $img = '';
+    $top_category = $_POST['top_category'];
+    $title = $_POST['title'];
+    $price = $_POST['price'];
+    $prime_cost = $_POST['prime_cost'];
+    $bargained = $_POST['bargained'];
+    $address = $_POST['address'];
+    $description = $_POST['description'];
+    $time = date('Y-m-d H:i:s',time());
+    // 获得ajax传过来的数据
 	$select = Select::create_singleton();
 	$sql = "select user_number from user.user_information where user_name = '".$username ."'";
 	$result = $select->select($sql);
@@ -68,20 +68,20 @@ $time = date('Y-m-d H:i:s',time());
 	//======缩略图剪裁结束======
 
     //======水印类实例开始======
-    $waterprint = new WaterMask('../goodsImg/images/'.$value); 
-	//实例化对象 里面放图片路径
-	$waterprint->waterImg = '../goodsImg/images/waterprint.png'; 
-	//水印图片路径
-	$waterprint->transparent = 45; 
-	//水印透明度 
-	$waterprint->pos = 10;  
+ //    $waterprint = new WaterMask('../goodsImg/images/'.$value); 
+	// //实例化对象 里面放图片路径
+	// $waterprint->waterImg = '../goodsImg/images/waterprint.png'; 
+	// //水印图片路径
+	// $waterprint->transparent = 45; 
+	// //水印透明度 
+	// $waterprint->pos = 10;  
 	//设置水印的位置
 	/*
 	1: //上左 2: //上中 3: //上右 4: //中左 
  	5: //中中 6: //中右 7: //下左 8: //下中 
  	其余的数字都是下右
 	*/
-	$waterprint->output(); 
+	// $waterprint->output(); 
 	// //输出水印图片文件覆盖到输入的图片文件 
  	//======水印类实例结束======
     }
@@ -95,7 +95,7 @@ $time = date('Y-m-d H:i:s',time());
             btn: ['确定'], //按钮
             icon: 1
             }, function(){
-            top.location.href='http://localhost/CqnuTribune/secondHands/publishSecondGoods/frontEnd/index.php?iframe=goodsList.php';
+            top.location.href='../frontEnd/index.php?iframe=goodsList.php';
             });  });</script>";
             // top.location.href针对iframe跳转。表示最外层top跳转
     }

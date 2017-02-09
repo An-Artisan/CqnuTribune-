@@ -1,0 +1,7 @@
+错误语句:insert into makefriend.treehole (h_content,h_name,h_time,h_content_is_read) values ('<p>额额</p>','lisi','2017-01-16 01:02:48','0') 
+错误原因:Unknown column 'h_content_is_read' in 'field list'
+错误时间:2017-01-16 01:02:48
+错误语句:insert into makefriend.treehole (h_content,h_name,h_time,h_content_is_read) values ('<p>额额</p>','lisi','2017-01-16 01:03:21','0') 
+错误原因:Unknown column 'h_content_is_read' in 'field list'
+错误时间:2017-01-16 01:03:21
+

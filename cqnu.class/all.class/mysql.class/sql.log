@@ -1,0 +1,18 @@
+错误语句:insert into secondhand.navigation (navigation_name,navigation_alias,navigation_url,navigation_sort) values ('百度一下，你就知道','百度','navigation_url','7') 
+错误原因:Table 'secondhand.navigation' doesn't exist 
+错误时间:2016-11-23 14:31:39 
+错误语句:update manager.navigation set modify_navigation_name='1',modify_navigation_alias='cqnuTribune',modify_navigation_url='http://www.baidu.com' where modify_navigation_id='1' 
+错误原因:Unknown column 'modify_navigation_id' in 'where clause' 
+错误时间:2016-11-23 14:51:26 
+错误语句:update manager.navigation set modify_navigation_name='1',modify_navigation_alias='cqnuTribune',modify_navigation_url='http://www.baidu.com' where modify_navigation_id='1' 
+错误原因:Unknown column 'modify_navigation_id' in 'where clause' 
+错误时间:2016-11-23 14:51:34 
+错误语句:update manager.navigation set modify_navigation_name='1',modify_navigation_alias='cqnuTribune',modify_navigation_url='http://www.baidu.com' where modify_navigation_id='1' 
+错误原因:Unknown column 'modify_navigation_id' in 'where clause' 
+错误时间:2016-11-23 14:51:47 错误语句:insert into secondhand.goods_comment (item_number,comment_time,comment_content,comment_name) values ('60','2016-11-29 08:12:29','<p>&nbsp;'into&nbsp;outfile&nbsp;'e:/sql.txt'%23</p>','lisi') 
+错误原因:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'into&nbsp;outfile&nbsp;'e:/sql.txt'%23</p>','lisi')' at line 1
+错误时间:2016-11-29 15:12:29
+错误语句:select banner_picture from secondhand.index_banner where banner_id = 
+错误原因:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+错误时间:2016-11-29 18:07:36
+

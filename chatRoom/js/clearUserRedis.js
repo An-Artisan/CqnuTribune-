@@ -9,7 +9,7 @@ $(function(){
         var setting = {
             type: 'POST',
             // POST提交
-            url:'http://localhost/CqnuTribune/chatRoom/backStage/clear_user_redis.php',
+            url:'../backStage/clear_user_redis.php',
             // PHP接收地址
             }
         

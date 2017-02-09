@@ -3321,183 +3321,183 @@ _e(function (E, $) {
         'default': {
             title: '默认',
             data:[
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/1.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/10.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/11.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/12.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/13.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/14.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/15.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/16.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/17.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/18.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/19.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/2.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/20.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/21.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/22.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/23.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/24.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/25.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/26.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/27.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/28.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/29.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/3.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/30.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/31.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/32.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/33.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/34.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/35.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/36.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/37.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/38.gif', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/39.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/4.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/40.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/41.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/42.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/43.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/44.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/45.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/46.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/47.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/48.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/49.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/5.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/50.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/6.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/7.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/8.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img2/9.png', value:'[表情]' }
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/1.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/10.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/11.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/12.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/13.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/14.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/15.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/16.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/17.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/18.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/19.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/2.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/20.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/21.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/22.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/23.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/24.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/25.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/26.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/27.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/28.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/29.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/3.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/30.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/31.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/32.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/33.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/34.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/35.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/36.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/37.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/38.gif', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/39.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/4.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/40.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/41.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/42.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/43.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/44.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/45.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/46.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/47.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/48.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/49.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/5.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/50.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/6.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/7.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/8.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img2/9.png', value:'[表情]' }
  ]       },
         '异色表情':{
             title:'异色表情',
             data:[
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/1.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/10.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/11.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/12.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/13.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/14.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/15.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/16.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/17.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/18.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/19.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/2.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/20.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/21.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/22.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/23.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/24.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/25.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/26.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/27.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/28.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/29.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/3.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/30.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/31.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/33.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/36.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/37.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/38.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/39.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/4.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/40.gif', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/41.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/42.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/43.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/44.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/45.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/46.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/47.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/48.gif', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/49.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/5.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/50.gif', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/51.gif', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/53.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/54.gif', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/55.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/56.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/57.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/58.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/59.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/6.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/60.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/61.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/62.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/64.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/65.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/66.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/67.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/68.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/7.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/70.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/72.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/73.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/74.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/75.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/76.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/77.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/78.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/79.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/8.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/80.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/83.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/84.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/85.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img1/9.png', value:'[表情]' }
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/1.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/10.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/11.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/12.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/13.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/14.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/15.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/16.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/17.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/18.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/19.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/2.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/20.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/21.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/22.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/23.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/24.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/25.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/26.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/27.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/28.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/29.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/3.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/30.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/31.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/33.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/36.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/37.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/38.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/39.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/4.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/40.gif', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/41.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/42.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/43.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/44.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/45.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/46.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/47.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/48.gif', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/49.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/5.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/50.gif', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/51.gif', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/53.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/54.gif', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/55.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/56.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/57.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/58.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/59.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/6.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/60.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/61.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/62.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/64.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/65.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/66.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/67.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/68.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/7.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/70.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/72.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/73.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/74.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/75.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/76.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/77.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/78.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/79.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/8.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/80.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/83.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/84.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/85.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img1/9.png', value:'[表情]' }
      ]       },
         '恶搞表情' :{
             title:'恶搞表情',
             data:[
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/1.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/1.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/10.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/10.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/11.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/11.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/12.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/12.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/13.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/13.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/14.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/15.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/16.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/17.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/2.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/2.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/23.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/3.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/3.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/36.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/4.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/4.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/416.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/45.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/5.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/56.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/56.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/563.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/5656.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/5665.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/6.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/6.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/63.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/656.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/7.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/7.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/8.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/8.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/8989.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/9.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/9.png', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/95.jpg', value:'[表情]' },
-{icon:'http://localhost/CqnuTribune/styles/Editor/img/96.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/1.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/1.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/10.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/10.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/11.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/11.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/12.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/12.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/13.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/13.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/14.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/15.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/16.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/17.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/2.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/2.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/23.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/3.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/3.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/36.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/4.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/4.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/416.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/45.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/5.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/56.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/56.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/563.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/5656.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/5665.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/6.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/6.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/63.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/656.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/7.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/7.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/8.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/8.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/8989.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/9.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/9.png', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/95.jpg', value:'[表情]' },
+{icon:'http://cqnuer.joker1996.com/styles/Editor/img/96.png', value:'[表情]' },
 ]       },
         'weibo': {
             title: '微博表情',
@@ -6898,7 +6898,7 @@ _e(function (E, $) {
                 // 将结果插入编辑器
                 img = document.createElement('img');
                 img.onload = function () {
-                    var html = '<img src="' + resultText + '" alt="' + originalName + '" style="max-width:100%;"/>';
+                    var html = '<img class="pic" src="' + resultText + '" alt="' + originalName + '" />';
                     editor.command(null, 'insertHtml', html);
 
                     E.log('已插入图片，地址 ' + resultText);
@@ -7323,42 +7323,99 @@ _e(function (E, $) {
         }
 
         // onload事件
-        reader.onload = function (e) {
-            E.log('已读取' + filename + '文件');
+        // reader.onload = function (e) {
+        //     E.log('已读取' + filename + '文件');
 
-            var base64 = e.target.result || this.result;
-            editor.xhrUploadImg({
-                event: e,
-                filename: filename,
-                base64: base64,
-                fileType: fileType,
-                name: uploadFileName,
-                loadfn: function (resultText, xhr) {
-                    clearInput();
-                    // 执行配置中的方法
-                    var editor = this;
-                    onload.call(editor, resultText, xhr);
-                },
-                errorfn: function (xhr) {
-                    clearInput();
-                    if (E.isOnWebsite) {
-                        alert('wangEditor官网暂时没有服务端，因此报错。实际项目中不会发生');
-                    }
-                    // 执行配置中的方法
-                    var editor = this;
-                    onerror.call(editor, xhr);
-                },
-                timeoutfn: function (xhr) {
-                    clearInput();
-                    if (E.isOnWebsite) {
-                        alert('wangEditor官网暂时没有服务端，因此超时。实际项目中不会发生');
-                    }
-                    // 执行配置中的方法
-                    var editor = this;
-                    ontimeout(editor, xhr);
+        //     var base64 = e.target.result || this.result;
+        //     editor.xhrUploadImg({
+        //         event: e,
+        //         filename: filename,
+        //         base64: base64,
+        //         fileType: fileType,
+        //         name: uploadFileName,
+        //         loadfn: function (resultText, xhr) {
+        //             clearInput();
+        //             // 执行配置中的方法
+        //             var editor = this;
+        //             onload.call(editor, resultText, xhr);
+        //         },
+        //         errorfn: function (xhr) {
+        //             clearInput();
+        //             if (E.isOnWebsite) {
+        //                 alert('wangEditor官网暂时没有服务端，因此报错。实际项目中不会发生');
+        //             }
+        //             // 执行配置中的方法
+        //             var editor = this;
+        //             onerror.call(editor, xhr);
+        //         },
+        //         timeoutfn: function (xhr) {
+        //             clearInput();
+        //             if (E.isOnWebsite) {
+        //                 alert('wangEditor官网暂时没有服务端，因此超时。实际项目中不会发生');
+        //             }
+        //             // 执行配置中的方法
+        //             var editor = this;
+        //             ontimeout(editor, xhr);
+        //         }
+        //     });
+        // };
+//          // onload事件
+        reader.onload = function (e) {
+            
+            var result = e.target.result;   //返回的dataURL  
+            var image = new Image(); 
+            image.src = result;         
+            image.onload = function(){  //创建一个image对象，给canvas绘制使用
+                var cvs = document.createElement('canvas');
+                var scale = 1;  
+                if(this.width > 1000 || this.height > 1000){  //1000只是示例，可以根据具体的要求去设定  
+                    if(this.width > this.height){  
+                        scale = 1000 / this.width;
+                    }else{  
+                        scale = 1000 / this.height;  
+                    }  
                 }
-            });
+                cvs.width = this.width*scale; 
+                cvs.height = this.height*scale;     //计算等比缩小后图片宽高
+                var ctx = cvs.getContext('2d');  
+                ctx.drawImage(this, 0, 0, cvs.width, cvs.height);   
+                var newImageData = cvs.toDataURL(fileType, 0.8);   //重新生成图片，<span style="font-family: Arial, Helvetica, sans-serif;">fileType为用户选择的图片类型</span>
+                E.log('已读取' + filename + '文件'); 
+                var base64 =newImageData;               
+                editor.xhrUploadImg({
+                    event: e,
+                    filename: filename,
+                    base64: base64,
+                    fileType: fileType,
+                    name: uploadFileName,
+                    loadfn: function (resultText, xhr) {
+                        clearInput();
+                        // 执行配置中的方法
+                        var editor = this;
+                        onload.call(editor, resultText, xhr);
+                    },
+                    errorfn: function (xhr) {
+                        clearInput();
+                        if (E.isOnWebsite) {
+                            alert('wangEditor官网暂时没有服务端，因此报错。实际项目中不会发生');
+                        }
+                        // 执行配置中的方法
+                        var editor = this;
+                        onerror.call(editor, xhr);
+                    },
+                    timeoutfn: function (xhr) {
+                        clearInput();
+                        if (E.isOnWebsite) {
+                            alert('wangEditor官网暂时没有服务端，因此超时。实际项目中不会发生');
+                        }
+                        // 执行配置中的方法
+                        var editor = this;
+                        ontimeout(editor, xhr);
+                    }
+                });
+            }
         };
+
 
         // 开始取文件
         reader.readAsDataURL(file);

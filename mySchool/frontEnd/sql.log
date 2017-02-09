@@ -1,0 +1,7 @@
+错误语句:select s_id,s_title,s_content,s_name,s_picture,s_time,u.user_photo from user.user_information as u left join study_note.study_publish as s on s.s_name = u.user_name where s.s_id = 
+错误原因:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+错误时间:2017-01-16 02:35:52
+错误语句:select s_id,s_title,s_content,s_name,s_picture,s_time,u.user_photo from user.user_information as u left join study_note.study_publish as s on s.s_name = u.user_name where s.s_id = 
+错误原因:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+错误时间:2017-01-16 02:38:15
+
