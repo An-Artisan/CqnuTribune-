@@ -42,9 +42,10 @@ class MysqlConn{
 	// 服务器地址
 	public   $username = 'root';
 	// 数据库用户名
-	public   $password = '';
+	public   $password = 'JokerHosting520';
 	// 数据库登陆密码
-	public   $dbName = 'private_message';
+	public   $dbName = '
+	';
 	// 数据库
 	protected $conn = null;
 	public function create_singleton(){
@@ -54,6 +55,7 @@ class MysqlConn{
 		// 如果静态变量为null的话就创建一个对象
 			return self::$ins;
 		// 如果静态变量不为null的话，就直接返回当前的对象
+			
 	}
 	public function conn(){
 	$this->conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbName);
