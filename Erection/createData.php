@@ -216,7 +216,7 @@
 		  PRIMARY KEY (`c_id`)
 		  ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8");
 		  // 建立邮件已读表
-		  $insert_configuration = "INSERT INTO manager.configuration (`service_hotline`,`service_qq`,`service_wechat`,`service_weibo`,`baidu_statistics`,`copy_right`) VALUES ('13330295142','1090035743','m1090035743','不敢为天下','<script></script>','Copyright © 2016 重庆师范大学  计算机与信息科学学院 梦创空间版权所有©')";
+		  $insert_configuration = "INSERT INTO manager.configuration (`service_hotline`,`service_qq`,`service_wechat`,`service_weibo`,`baidu_statistics`,`copy_right`) VALUES ('13330295142','10406996','m1090035743','不敢为天下','<script></script>','Copyright © 2016 重庆师范大学  计算机与信息科学学院 梦创空间版权所有©')";
 		  mysqli_query($conn,$insert_configuration);
 		  // 插入版权信息数据
 		  $insert_friendly_link = "INSERT INTO manager.friendly_link (`friendly_link_sort`,`friendly_link_name`,`friendly_link_url`) VALUES (1,'重庆师范大学官网','http://www.cqnu.edu.cn/'),(2,'重庆师范大学教务系统','http://jwxt.cqnu.edu.cn/(bx1tyafxaknzqsi3sy4mrh55)/Default2.aspx'),(3,'重庆师范大学研究生院','http://graduate.cqnu.edu.cn/'),(4,'重庆师范大学本科招生信息网','http://zsb.cqnu.edu.cn/')";
